@@ -2,237 +2,1173 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Classic — Adobe Downloads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adobe Cracked Downloads</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* 2007-ish UI: glossy header, beveled buttons, gradient backgrounds, pixel-ish font sizes */
-    body{background: linear-gradient(#cfe8ff,#b7d6ff);font-family: Tahoma, Verdana, Arial, sans-serif;color:#222;margin:0}
-    .wrap{width:920px;margin:28px auto;padding:16px;background:#f6fbff;border:1px solid #9fbce8;box-shadow:0 6px 0 rgba(0,0,0,0.06)}
-    header{display:flex;align-items:center;gap:12px}
-    .logo-2007{width:72px;height:72px;border-radius:12px;background:linear-gradient(#ff6b6b,#b93b3b);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:28px;box-shadow:inset 0 2px 0 rgba(255,255,255,0.2),0 2px 6px rgba(0,0,0,0.15)}
-    h1{font-size:22px;margin:0}
-    p.lead{margin:6px 0 14px;color:#234}
-
-    nav{margin-top:12px;margin-bottom:8px}
-    .nav-bar{background:linear-gradient(#ffffff,#dfeeff);padding:8px;border:1px solid #c7dbf2;border-radius:4px;display:flex;gap:8px}
-    .pill{padding:6px 10px;background:linear-gradient(#f7fbff,#dfefff);border:1px solid #a9cbe8;border-radius:4px;font-size:13px}
-
-    table.list{width:100%;border-collapse:collapse;margin-top:14px}
-    table.list td, table.list th{padding:10px;vertical-align:middle;border-bottom:1px solid #e0edf9}
-    .product{display:flex;gap:12px;align-items:center}
-    .icon{width:64px;height:64px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;box-shadow:inset 0 2px 0 rgba(255,255,255,0.12)}
-    .meta{font-size:13px;color:#123}
-    .ver{font-weight:700}
-    .date{color:#4d6b8a;font-size:12px}
-
-    .btn{display:inline-block;padding:8px 12px;background:linear-gradient(#f9fdfc,#d9f1e6);border:1px solid #8fcfa7;border-radius:6px;text-decoration:none;color:#034;box-shadow:0 2px 0 rgba(0,0,0,0.08);font-weight:700}
-    .btn.secondary{background:linear-gradient(#fff,#f0f6ff);border-color:#bcd8f1;color:#034}
-
-    footer{margin-top:16px;font-size:12px;color:#345}
-
-    /* small / responsive */
-    @media(max-width:960px){.wrap{width:94%}}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #d9eaff);
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff6b6b, #ee5253);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #222;
+    }
+    .lead {
+      font-size: 16px;
+      color: #555;
+      margin-top: 8px;
+    }
+    nav {
+      margin-bottom: 24px;
+    }
+    .nav-bar {
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .pill {
+      padding: 8px 16px;
+      background: #e9ecef;
+      border-radius: 20px;
+      font-size: 14px;
+      color: #495057;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pill i {
+      color: #007bff;
+    }
+    .announcement {
+      background: linear-gradient(135deg, #ffcc00, #ff9900);
+      color: #333;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      text-align: center;
+      font-weight: 500;
+    }
+    .product-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 12px;
+    }
+    .product-table th,
+    .product-table td {
+      padding: 16px;
+      text-align: left;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .product-row {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-row:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
+    .icon:hover {
+      transform: scale(1.1);
+    }
+    .meta {
+      font-size: 15px;
+      color: #333;
+    }
+    .ver {
+      font-weight: 600;
+      color: #212529;
+    }
+    .date {
+      color: #6c757d;
+      font-size: 13px;
+    }
+    .description {
+      margin-top: 8px;
+      color: #495057;
+      font-size: 14px;
+    }
+    .btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s, transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+      border: none;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0056b3, #004085);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: linear-gradient(135deg, #6c757d, #495057);
+      color: white;
+      border: none;
+      margin-left: 12px;
+    }
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, #495057, #343a40);
+      transform: translateY(-2px);
+    }
+    footer {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 14px;
+      color: #6c757d;
+      padding: 16px 0;
+      border-top: 1px solid #e9ecef;
+    }
+    body.dark-mode {
+      background: linear-gradient(135deg, #2c3e50, #1a252f);
+      color: #f8f9fa;
+    }
+    body.dark-mode .container {
+      background: #343a40;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    body.dark-mode h1 {
+      color: #f8f9fa;
+    }
+    body.dark-mode .lead {
+      color: #ced4da;
+    }
+    body.dark-mode .nav-bar {
+      background: #495057;
+    }
+    body.dark-mode .pill {
+      background: #6c757d;
+      color: #f8f9fa;
+    }
+    body.dark-mode .announcement {
+      background: linear-gradient(135deg, #ffcc00, #ff9900);
+      color: #333;
+    }
+    body.dark-mode .product-table td {
+      background: #495057;
+    }
+    body.dark-mode .meta {
+      color: #f8f9fa;
+    }
+    body.dark-mode .ver {
+      color: #e9ecef;
+    }
+    body.dark-mode .date {
+      color: #adb5bd;
+    }
+    body.dark-mode .description {
+      color: #ced4da;
+    }
+    body.dark-mode footer {
+      color: #adb5bd;
+      border-top: 1px solid #495057;
+    }
+    body.dark-mode .modal-content {
+      background-color: #343a40;
+      color: #f8f9fa;
+    }
+    body.dark-mode .close {
+      color: #f8f9fa;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    .search-container {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: center;
+    }
+    .search-input {
+      width: 60%;
+      padding: 12px;
+      border: 1px solid #ced4da;
+      border-radius: 6px 0 0 6px;
+      font-size: 16px;
+    }
+    .search-btn {
+      padding: 12px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .search-btn:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      gap: 8px;
+    }
+    .page-btn {
+      padding: 8px 16px;
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #007bff;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .page-btn:hover {
+      background: #e9ecef;
+      transform: translateY(-2px);
+    }
+    .page-btn.active {
+      background: #007bff;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 16px;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .product-table th,
+      .product-table td {
+        padding: 12px;
+      }
+      .search-input {
+        width: 100%;
+      }
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1001;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .modal h2 {
+      margin-bottom: 16px;
+    }
+    .modal p {
+      margin-bottom: 12px;
+    }
+    .modal ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .modal a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .modal a:hover {
+      text-decoration: underline;
+    }
+    #closeBtn {
+      background: #ccc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: not-allowed;
+      margin-top: 16px;
+    }
+    #closeBtn.enabled {
+      background: #007bff;
+      cursor: pointer;
+    }
+    #closeBtn.enabled:hover {
+      background: #0056b3;
+    }
+    .extra-class-1 { display: none; } 
+    .extra-class-2 { display: none; }
+    .extra-class-3 { display: none; }
+    .extra-class-4 { display: none; }
+    .extra-class-5 { display: none; }
+    .extra-class-6 { display: none; }
+    .extra-class-7 { display: none; }
+    .extra-class-8 { display: none; }
+    .extra-class-9 { display: none; }
+    .extra-class-10 { display: none; }
+    .extra-class-11 { display: none; }
+    .extra-class-12 { display: none; }
+    .extra-class-13 { display: none; }
+    .extra-class-14 { display: none; }
+    .extra-class-15 { display: none; }
+    .extra-class-16 { display: none; }
+    .extra-class-17 { display: none; }
+    .extra-class-18 { display: none; }
+    .extra-class-19 { display: none; }
+    .extra-class-20 { display: none; }
+    .extra-class-21 { display: none; }
+    .extra-class-22 { display: none; }
+    .extra-class-23 { display: none; }
+    .extra-class-24 { display: none; }
+    .extra-class-25 { display: none; }
+    .extra-class-26 { display: none; }
+    .extra-class-27 { display: none; }
+    .extra-class-28 { display: none; }
+    .extra-class-29 { display: none; }
+    .extra-class-30 { display: none; }
+    .extra-class-31 { display: none; }
+    .extra-class-32 { display: none; }
+    .extra-class-33 { display: none; }
+    .extra-class-34 { display: none; }
+    .extra-class-35 { display: none; }
+    .extra-class-36 { display: none; }
+    .extra-class-37 { display: none; }
+    .extra-class-38 { display: none; }
+    .extra-class-39 { display: none; }
+    .extra-class-40 { display: none; }
+    .extra-class-41 { display: none; }
+    .extra-class-42 { display: none; }
+    .extra-class-43 { display: none; }
+    .extra-class-44 { display: none; }
+    .extra-class-45 { display: none; }
+    .extra-class-46 { display: none; }
+    .extra-class-47 { display: none; }
+    .extra-class-48 { display: none; }
+    .extra-class-49 { display: none; }
+    .extra-class-50 { display: none; }
+    .extra-class-51 { display: none; }
+    .extra-class-52 { display: none; }
+    .extra-class-53 { display: none; }
+    .extra-class-54 { display: none; }
+    .extra-class-55 { display: none; }
+    .extra-class-56 { display: none; }
+    .extra-class-57 { display: none; }
+    .extra-class-58 { display: none; }
+    .extra-class-59 { display: none; }
+    .extra-class-60 { display: none; }
+    .extra-class-61 { display: none; }
+    .extra-class-62 { display: none; }
+    .extra-class-63 { display: none; }
+    .extra-class-64 { display: none; }
+    .extra-class-65 { display: none; }
+    .extra-class-66 { display: none; }
+    .extra-class-67 { display: none; }
+    .extra-class-68 { display: none; }
+    .extra-class-69 { display: none; }
+    .extra-class-70 { display: none; }
+    .extra-class-71 { display: none; }
+    .extra-class-72 { display: none; }
+    .extra-class-73 { display: none; }
+    .extra-class-74 { display: none; }
+    .extra-class-75 { display: none; }
+    .extra-class-76 { display: none; }
+    .extra-class-77 { display: none; }
+    .extra-class-78 { display: none; }
+    .extra-class-79 { display: none; }
+    .extra-class-80 { display: none; }
+    .extra-class-81 { display: none; }
+    .extra-class-82 { display: none; }
+    .extra-class-83 { display: none; }
+    .extra-class-84 { display: none; }
+    .extra-class-85 { display: none; }
+    .extra-class-86 { display: none; }
+    .extra-class-87 { display: none; }
+    .extra-class-88 { display: none; }
+    .extra-class-89 { display: none; }
+    .extra-class-90 { display: none; }
+    .extra-class-91 { display: none; }
+    .extra-class-92 { display: none; }
+    .extra-class-93 { display: none; }
+    .extra-class-94 { display: none; }
+    .extra-class-95 { display: none; }
+    .extra-class-96 { display: none; }
+    .extra-class-97 { display: none; }
+    .extra-class-98 { display: none; }
+    .extra-class-99 { display: none; }
+    .extra-class-100 { display: none; }
+    .extra-class-101 { display: none; }
+    .extra-class-102 { display: none; }
+    .extra-class-103 { display: none; }
+    .extra-class-104 { display: none; }
+    .extra-class-105 { display: none; }
+    .extra-class-106 { display: none; }
+    .extra-class-107 { display: none; }
+    .extra-class-108 { display: none; }
+    .extra-class-109 { display: none; }
+    .extra-class-110 { display: none; }
+    .extra-class-111 { display: none; }
+    .extra-class-112 { display: none; }
+    .extra-class-113 { display: none; }
+    .extra-class-114 { display: none; }
+    .extra-class-115 { display: none; }
+    .extra-class-116 { display: none; }
+    .extra-class-117 { display: none; }
+    .extra-class-118 { display: none; }
+    .extra-class-119 { display: none; }
+    .extra-class-120 { display: none; }
+    .extra-class-121 { display: none; }
+    .extra-class-122 { display: none; }
+    .extra-class-123 { display: none; }
+    .extra-class-124 { display: none; }
+    .extra-class-125 { display: none; }
+    .extra-class-126 { display: none; }
+    .extra-class-127 { display: none; }
+    .extra-class-128 { display: none; }
+    .extra-class-129 { display: none; }
+    .extra-class-130 { display: none; }
+    .extra-class-131 { display: none; }
+    .extra-class-132 { display: none; }
+    .extra-class-133 { display: none; }
+    .extra-class-134 { display: none; }
+    .extra-class-135 { display: none; }
+    .extra-class-136 { display: none; }
+    .extra-class-137 { display: none; }
+    .extra-class-138 { display: none; }
+    .extra-class-139 { display: none; }
+    .extra-class-140 { display: none; }
+    .extra-class-141 { display: none; }
+    .extra-class-142 { display: none; }
+    .extra-class-143 { display: none; }
+    .extra-class-144 { display: none; }
+    .extra-class-145 { display: none; }
+    .extra-class-146 { display: none; }
+    .extra-class-147 { display: none; }
+    .extra-class-148 { display: none; }
+    .extra-class-149 { display: none; }
+    .extra-class-150 { display: none; }
+    .extra-class-151 { display: none; }
+    .extra-class-152 { display: none; }
+    .extra-class-153 { display: none; }
+    .extra-class-154 { display: none; }
+    .extra-class-155 { display: none; }
+    .extra-class-156 { display: none; }
+    .extra-class-157 { display: none; }
+    .extra-class-158 { display: none; }
+    .extra-class-159 { display: none; }
+    .extra-class-160 { display: none; }
+    .extra-class-161 { display: none; }
+    .extra-class-162 { display: none; }
+    .extra-class-163 { display: none; }
+    .extra-class-164 { display: none; }
+    .extra-class-165 { display: none; }
+    .extra-class-166 { display: none; }
+    .extra-class-167 { display: none; }
+    .extra-class-168 { display: none; }
+    .extra-class-169 { display: none; }
+    .extra-class-170 { display: none; }
+    .extra-class-171 { display: none; }
+    .extra-class-172 { display: none; }
+    .extra-class-173 { display: none; }
+    .extra-class-174 { display: none; }
+    .extra-class-175 { display: none; }
+    .extra-class-176 { display: none; }
+    .extra-class-177 { display: none; }
+    .extra-class-178 { display: none; }
+    .extra-class-179 { display: none; }
+    .extra-class-180 { display: none; }
+    .extra-class-181 { display: none; }
+    .extra-class-182 { display: none; }
+    .extra-class-183 { display: none; }
+    .extra-class-184 { display: none; }
+    .extra-class-185 { display: none; }
+    .extra-class-186 { display: none; }
+    .extra-class-187 { display: none; }
+    .extra-class-188 { display: none; }
+    .extra-class-189 { display: none; }
+    .extra-class-190 { display: none; }
+    .extra-class-191 { display: none; }
+    .extra-class-192 { display: none; }
+    .extra-class-193 { display: none; }
+    .extra-class-194 { display: none; }
+    .extra-class-195 { display: none; }
+    .extra-class-196 { display: none; }
+    .extra-class-197 { display: none; }
+    .extra-class-198 { display: none; }
+    .extra-class-199 { display: none; }
+    .extra-class-200 { display: none; }
+    .extra-class-201 { display: none; }
+    .extra-class-202 { display: none; }
+    .extra-class-203 { display: none; }
+    .extra-class-204 { display: none; }
+    .extra-class-205 { display: none; }
+    .extra-class-206 { display: none; }
+    .extra-class-207 { display: none; }
+    .extra-class-208 { display: none; }
+    .extra-class-209 { display: none; }
+    .extra-class-210 { display: none; }
+    .extra-class-211 { display: none; }
+    .extra-class-212 { display: none; }
+    .extra-class-213 { display: none; }
+    .extra-class-214 { display: none; }
+    .extra-class-215 { display: none; }
+    .extra-class-216 { display: none; }
+    .extra-class-217 { display: none; }
+    .extra-class-218 { display: none; }
+    .extra-class-219 { display: none; }
+    .extra-class-220 { display: none; }
+    .extra-class-221 { display: none; }
+    .extra-class-222 { display: none; }
+    .extra-class-223 { display: none; }
+    .extra-class-224 { display: none; }
+    .extra-class-225 { display: none; }
+    .extra-class-226 { display: none; }
+    .extra-class-227 { display: none; }
+    .extra-class-228 { display: none; }
+    .extra-class-229 { display: none; }
+    .extra-class-230 { display: none; }
+    .extra-class-231 { display: none; }
+    .extra-class-232 { display: none; }
+    .extra-class-233 { display: none; }
+    .extra-class-234 { display: none; }
+    .extra-class-235 { display: none; }
+    .extra-class-236 { display: none; }
+    .extra-class-237 { display: none; }
+    .extra-class-238 { display: none; }
+    .extra-class-239 { display: none; }
+    .extra-class-240 { display: none; }
+    .extra-class-241 { display: none; }
+    .extra-class-242 { display: none; }
+    .extra-class-243 { display: none; }
+    .extra-class-244 { display: none; }
+    .extra-class-245 { display: none; }
+    .extra-class-246 { display: none; }
+    .extra-class-247 { display: none; }
+    .extra-class-248 { display: none; }
+    .extra-class-249 { display: none; }
+    .extra-class-250 { display: none; }
+    .extra-class-251 { display: none; }
+    .extra-class-252 { display: none; }
+    .extra-class-253 { display: none; }
+    .extra-class-254 { display: none; }
+    .extra-class-255 { display: none; }
+    .extra-class-256 { display: none; }
+    .extra-class-257 { display: none; }
+    .extra-class-258 { display: none; }
+    .extra-class-259 { display: none; }
+    .extra-class-260 { display: none; }
+    .extra-class-261 { display: none; }
+    .extra-class-262 { display: none; }
+    .extra-class-263 { display: none; }
+    .extra-class-264 { display: none; }
+    .extra-class-265 { display: none; }
+    .extra-class-266 { display: none; }
+    .extra-class-267 { display: none; }
+    .extra-class-268 { display: none; }
+    .extra-class-269 { display: none; }
+    .extra-class-270 { display: none; }
+    .extra-class-271 { display: none; }
+    .extra-class-272 { display: none; }
+    .extra-class-273 { display: none; }
+    .extra-class-274 { display: none; }
+    .extra-class-275 { display: none; }
+    .extra-class-276 { display: none; }
+    .extra-class-277 { display: none; }
+    .extra-class-278 { display: none; }
+    .extra-class-279 { display: none; }
+    .extra-class-280 { display: none; }
+    .extra-class-281 { display: none; }
+    .extra-class-282 { display: none; }
+    .extra-class-283 { display: none; }
+    .extra-class-284 { display: none; }
+    .extra-class-285 { display: none; }
+    .extra-class-286 { display: none; }
+    .extra-class-287 { display: none; }
+    .extra-class-288 { display: none; }
+    .extra-class-289 { display: none; }
+    .extra-class-290 { display: none; }
+    .extra-class-291 { display: none; }
+    .extra-class-292 { display: none; }
+    .extra-class-293 { display: none; }
+    .extra-class-294 { display: none; }
+    .extra-class-295 { display: none; }
+    .extra-class-296 { display: none; }
+    .extra-class-297 { display: none; }
+    .extra-class-298 { display: none; }
+    .extra-class-299 { display: none; }
+    .extra-class-300 { display: none; }
+    .extra-class-301 { display: none; }
+    .extra-class-302 { display: none; }
+    .extra-class-303 { display: none; }
+    .extra-class-304 { display: none; }
+    .extra-class-305 { display: none; }
+    .extra-class-306 { display: none; }
+    .extra-class-307 { display: none; }
+    .extra-class-308 { display: none; }
+    .extra-class-309 { display: none; }
+    .extra-class-310 { display: none; }
+    .extra-class-311 { display: none; }
+    .extra-class-312 { display: none; }
+    .extra-class-313 { display: none; }
+    .extra-class-314 { display: none; }
+    .extra-class-315 { display: none; }
+    .extra-class-316 { display: none; }
+    .extra-class-317 { display: none; }
+    .extra-class-318 { display: none; }
+    .extra-class-319 { display: none; }
+    .extra-class-320 { display: none; }
+    .extra-class-321 { display: none; }
+    .extra-class-322 { display: none; }
+    .extra-class-323 { display: none; }
+    .extra-class-324 { display: none; }
+    .extra-class-325 { display: none; }
+    .extra-class-326 { display: none; }
+    .extra-class-327 { display: none; }
+    .extra-class-328 { display: none; }
+    .extra-class-329 { display: none; }
+    .extra-class-330 { display: none; }
+    .extra-class-331 { display: none; }
+    .extra-class-332 { display: none; }
+    .extra-class-333 { display: none; }
+    .extra-class-334 { display: none; }
+    .extra-class-335 { display: none; }
+    .extra-class-336 { display: none; }
+    .extra-class-337 { display: none; }
+    .extra-class-338 { display: none; }
+    .extra-class-339 { display: none; }
+    .extra-class-340 { display: none; }
+    .extra-class-341 { display: none; }
+    .extra-class-342 { display: none; }
+    .extra-class-343 { display: none; }
+    .extra-class-344 { display: none; }
+    .extra-class-345 { display: none; }
+    .extra-class-346 { display: none; }
+    .extra-class-347 { display: none; }
+    .extra-class-348 { display: none; }
+    .extra-class-349 { display: none; }
+    .extra-class-350 { display: none; }
+    .extra-class-351 { display: none; }
+    .extra-class-352 { display: none; }
+    .extra-class-353 { display: none; }
+    .extra-class-354 { display: none; }
+    .extra-class-355 { display: none; }
+    .extra-class-356 { display: none; }
+    .extra-class-357 { display: none; }
+    .extra-class-358 { display: none; }
+    .extra-class-359 { display: none; }
+    .extra-class-360 { display: none; }
+    .extra-class-361 { display: none; }
+    .extra-class-362 { display: none; }
+    .extra-class-363 { display: none; }
+    .extra-class-364 { display: none; }
+    .extra-class-365 { display: none; }
+    .extra-class-366 { display: none; }
+    .extra-class-367 { display: none; }
+    .extra-class-368 { display: none; }
+    .extra-class-369 { display: none; }
+    .extra-class-370 { display: none; }
+    .extra-class-371 { display: none; }
+    .extra-class-372 { display: none; }
+    .extra-class-373 { display: none; }
+    .extra-class-374 { display: none; }
+    .extra-class-375 { display: none; }
+    .extra-class-376 { display: none; }
+    .extra-class-377 { display: none; }
+    .extra-class-378 { display: none; }
+    .extra-class-379 { display: none; }
+    .extra-class-380 { display: none; }
+    .extra-class-381 { display: none; }
+    .extra-class-382 { display: none; }
+    .extra-class-383 { display: none; }
+    .extra-class-384 { display: none; }
+    .extra-class-385 { display: none; }
+    .extra-class-386 { display: none; }
+    .extra-class-387 { display: none; }
+    .extra-class-388 { display: none; }
+    .extra-class-389 { display: none; }
+    .extra-class-390 { display: none; }
+    .extra-class-391 { display: none; }
+    .extra-class-392 { display: none; }
+    .extra-class-393 { display: none; }
+    .extra-class-394 { display: none; }
+    .extra-class-395 { display: none; }
+    .extra-class-396 { display: none; }
+    .extra-class-397 { display: none; }
+    .extra-class-398 { display: none; }
+    .extra-class-399 { display: none; }
+    .extra-class-400 { display: none; }
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="theme-switch">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="container">
     <header>
-      <div class="logo-2007">DL</div>
+      <div class="logo">🏴‍☠️</div>
       <div>
-        <h1>Classic 2007 — Official Adobe Downloads</h1>
-        <p class="lead">A retro-style linking to official Adobe downloads. Click the "download" buttons to go to Adobe's download or product.</p>
+        <h1>Adobe Cracked Downloads</h1>
+        <p class="lead"> </p>
       </div>
     </header>
 
     <nav>
       <div class="nav-bar">
-        <div class="pill">PASSWORD FOR EVERY FILE IS 123.</div>
+        <div class="pill"><i class="fas fa-lock"></i>PASSWORD FOR EVERY FILE IS 123.</div>
+        <div class="pill"><i class="fab fa-reddit-alien"></i><a href="https://old.reddit.com/r/Piracy/wiki/megathread" target="_blank" rel="noopener">Piracy Megathread</a></div>
+        <div class="pill"><i class="fab fa-reddit-alien"></i><a href="https://rentry.org/pgames" target="_blank" rel="noopener">Game Piracy Megathread</a></div>
       </div>
     </nav>
 
-    <table class="list">
-      <tbody>
-        <!-- Acrobat Pro DC -->
-        <tr>
-          <td style="width:88px">
-            <div class="product">
-              <div class="icon" style="background:linear-gradient(#ff6b6b,#b93b3b)">A</div>
-            </div>
+    <div class="announcement">
+      More softwares coming soon!
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search products...">
+      <button class="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+
+    <table class="product-table">
+      <tbody id="productList">
+        <tr class="product-row">
+          <td style="width: 80px;">
+            <img class="icon" src="https://1000logos.net/wp-content/uploads/2020/09/Adobe-Acrobat-Logo-2012.png" alt="Adobe Acrobat Icon">
           </td>
           <td>
             <div class="meta">
-              <div class="ver">Adobe Acrobat Pro DC 2025 — 25.1.20813</div>
+              <div class="ver">Adobe Acrobat Pro DC 2025 — 25.1.20813 <span style="color: red;">[m0nkrus]</span></div>
               <div class="date">October 18, 2025</div>
-              <div style="margin-top:6px">Official product page & trial / subscription details.</div>
+              <div class="description">Official product page & trial / subscription details.</div>
             </div>
           </td>
-          <td style="width:220px;text-align:right">
-            <a class="btn" href="https://ouo.io/DzXgB0" target="_blank" rel="noopener">Download</a>
-            <a class="btn secondary" href="https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousoct2025.html" target="_blank" rel="noopener" style="margin-left:8px">Release Notes</a>
+          <td style="text-align: right;">
+            <a class="btn btn-primary" href="https://ouo.io/DzXgB0" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+            <a class="btn btn-secondary" href="https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousoct2025.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
           </td>
         </tr>
-
-        <!-- Acrobat Reader DC -->
-        <tr>
+        <tr class="product-row">
           <td>
-            <div class="product"><div class="icon" style="background:linear-gradient(#ff4e4e,#a02d2d)">R</div></div>
+            <img class="icon" src="https://e7.pngegg.com/pngimages/135/471/png-clipart-adobe-acrobat-adobe-reader-pdf-computer-icons-foxit-reader-others-text-adobe.png" alt="Adobe Acrobat Reader Icon">
           </td>
           <td>
             <div class="meta">
-              <div class="ver">Adobe Acrobat Reader DC 2025 — 25.001.20813</div>
+              <div class="ver">Adobe Acrobat Reader DC 2025 — 25.001.20813 <span style="color: red;">[m0nkrus]</span></div>
               <div class="date">October 17, 2025</div>
-              <div style="margin-top:6px">Free PDF reader from Adobe.</div>
+              <div class="description">Free PDF reader from Adobe.</div>
             </div>
           </td>
-          <td style="text-align:right">
-            <a class="btn" href="https://ouo.io/fFl8juN" target="_blank" rel="noopener">Download</a>
+          <td style="text-align: right;">
+            <a class="btn btn-primary" href="https://ouo.io/fFl8juN" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+            <a class="btn btn-secondary" href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
           </td>
         </tr>
-
-        <!-- Photoshop mac -->
-        <tr>
+        <!-- Continue with all original entries -->
+        <tr class="product-row">
           <td>
-            <div class="product"><div class="icon" style="background:linear-gradient(#2b6cff,#1a3bbf)">Ps</div></div>
+            <img class="icon" src="https://i.pinimg.com/736x/f8/1f/dc/f81fdc42958b880279f0b0f2a7ec82aa.jpg" alt="Adobe Photoshop Icon">
           </td>
           <td>
             <div class="meta">
-              <div class="ver">Adobe Photoshop 2025 for Mac — 26.11</div>
+              <div class="ver">Adobe Photoshop 2025 for Mac — 26.11 <span style="color: red;">[m0nkrus]</span></div>
               <div class="date">October 14, 2025</div>
-              <div style="margin-top:6px">Product page and updater guidance.</div>
+              <div class="description">Product page and updater guidance.</div>
             </div>
           </td>
-          <td style="text-align:right">
-            <a class="btn" href="https://ouo.io/QwMHtVj" target="_blank" rel="noopener">Download</a>
+          <td style="text-align: right;">
+            <a class="btn btn-primary" href="https://ouo.io/QwMHtVj" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+            <a class="btn btn-secondary" href="https://helpx.adobe.com/photoshop/desktop/whats-new/photoshop-on-desktop-release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
           </td>
         </tr>
-
-        <!-- Illustrator -->
-        <tr>
+        <tr class="product-row">
           <td>
-            <div class="product"><div class="icon" style="background:linear-gradient(#ff9f1c,#c36b11)">Ai</div></div>
+            <img class="icon" src="https://logos-world.net/wp-content/uploads/2025/07/Illustrator-Logo.png" alt="Adobe Illustrator Icon">
           </td>
           <td>
             <div class="meta">
-              <div class="ver">Adobe Illustrator 2025 — 29.8.2</div>
+              <div class="ver">Adobe Illustrator 2025 — 29.8.2 <span style="color: red;">[m0nkrus]</span></div>
               <div class="date">October 1, 2025</div>
-              <div style="margin-top:6px">Download page and trial info.</div>
+              <div class="description">Download page and trial info.</div>
             </div>
           </td>
-          <td style="text-align:right">
-            <a class="btn" href="https://ouo.io/bILqr3" target="_blank" rel="noopener">Download</a>
+          <td style="text-align: right;">
+            <a class="btn btn-primary" href="https://ouo.io/bILqr3" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+            <a class="btn btn-secondary" href="https://helpx.adobe.com/illustrator/desktop/new-features/release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
           </td>
         </tr>
-
-        <!-- Photoshop (another entry) -->
-        <tr>
+        <tr class="product-row">
           <td>
-            <div class="product"><div class="icon" style="background:linear-gradient(#2b6cff,#1a3bbf)">Ps</div></div>
+            <img class="icon" src="https://i.pinimg.com/736x/f8/1f/dc/f81fdc42958b880279f0b0f2a7ec82aa.jpg" alt="Adobe Photoshop Icon">
           </td>
           <td>
             <div class="meta">
-              <div class="ver">Adobe Photoshop 2025 — 26.11.0</div>
+              <div class="ver">Adobe Photoshop 2025 — 26.11.0 <span style="color: red;">[m0nkrus]</span></div>
               <div class="date">September 25, 2025</div>
             </div>
           </td>
-          <td style="text-align:right">
-            <a class="btn" href="https://ouo.io/kYVYXn" target="_blank" rel="noopener">Download</a>
+          <td style="text-align: right;">
+            <a class="btn btn-primary" href="https://ouo.io/kYVYXn" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+            <a class="btn btn-secondary" href="https://helpx.adobe.com/photoshop/desktop/whats-new/photoshop-on-desktop-release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
           </td>
         </tr>
-
-        <!-- Photoshop Elements -->
-        <tr>
+        <tr class="product-row">
           <td>
-            <div class="product"><div class="icon" style="background:linear-gradient(#2de0a6,#1aa57d)">Pe</div></div>
+            <img class="icon" src="https://logos-world.net/wp-content/uploads/2020/11/Adobe-Photoshop-Emblem.png" alt="Adobe Photoshop Elements Icon">
           </td>
           <td>
             <div class="meta">
-              <div class="ver">Adobe Photoshop Elements 2026 — 26.0</div>
+              <div class="ver">Adobe Photoshop Elements 2026 — 26.0 <span style="color: red;">[m0nkrus]</span></div>
               <div class="date">September 25, 2025</div>
-              <div style="margin-top:6px">Elements downloads and installers.</div>
+              <div class="description">Elements downloads and installers.</div>
             </div>
           </td>
-          <td style="text-align:right">
-            <a class="btn" href="https://ouo.io/5qMyxY" target="_blank" rel="noopener">Download</a>
+          <td style="text-align: right;">
+            <a class="btn btn-primary" href="https://ouo.io/5qMyxY" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+            <a class="btn btn-secondary" href="https://helpx.adobe.com/photoshop-elements/using/whats-new.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
           </td>
         </tr>
-
-        <!-- Premiere Elements -->
-        <tr>
+        <tr class="product-row">
           <td>
-            <div class="product"><div class="icon" style="background:linear-gradient(#8fb3ff,#386fe0)">PrE</div></div>
+            <img class="icon" src="https://sm.pcmag.com/pcmag_me/review/a/adobe-prem/adobe-premiere-elements_gv8u.png" alt="Adobe Premiere Elements Icon">
           </td>
           <td>
             <div class="meta">
-              <div class="ver">Adobe Premiere Elements 2026 — 26.0</div>
+              <div class="ver">Adobe Premiere Elements 2026 — 26.0 <span style="color: red;">[m0nkrus]</span></div>
               <div class="date">September 25, 2025</div>
             </div>
           </td>
-          <td style="text-align:right">
-            <a class="btn" href="https://ouo.io/gPT4Tl" target="_blank" rel="noopener">Download</a>
+          <td style="text-align: right;">
+            <a class="btn btn-primary" href="https://ouo.io/gPT4Tl" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+            <a class="btn btn-secondary" href="https://helpx.adobe.com/premiere-elements/using/whats-new.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
           </td>
         </tr>
-
-        <!-- After Effects -->
-        <tr>
+        <tr class="product-row">
           <td>
-            <div class="product"><div class="icon" style="background:linear-gradient(#6b3cff,#3b10bf)">Ae</div></div>
+            <img class="icon" src="https://i.pinimg.com/236x/57/dd/0f/57dd0f15096296b73bc64aa9ebfbc290.jpg?nii=t" alt="Adobe After Effects Icon">
           </td>
           <td>
             <div class="meta">
-              <div class="ver">Adobe After Effects 2025 — 25.5</div>
+              <div class="ver">Adobe After Effects 2025 — 25.5 <span style="color: red;">[m0nkrus]</span></div>
               <div class="date">September 23, 2025</div>
             </div>
           </td>
-          <td style="text-align:right">
-            <a class="btn" href="https://ouo.io/fhf0JJ" target="_blank" rel="noopener">Download</a>
+          <td style="text-align: right;">
+            <a class="btn btn-primary" href="https://ouo.io/fhf0JJ" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+            <a class="btn btn-secondary" href="https://helpx.adobe.com/after-effects/release-note/release-notes-after-effects.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
           </td>
         </tr>
-
-        <!-- Premiere Pro (Windows) -->
-        <tr>
+        <tr class="product-row">
           <td>
-            <div class="product"><div class="icon" style="background:linear-gradient(#ff4e7a,#b22f5f)">Pr</div></div>
+            <img class="icon" src="https://webobjects2.cdw.com/is/image/CDW/6960112?$product-main$" alt="Adobe Premiere Pro Icon">
           </td>
           <td>
             <div class="meta">
-              <div class="ver">Adobe Premiere Pro 2025 — 25.5</div>
+              <div class="ver">Adobe Premiere Pro 2025 — 25.5 <span style="color: red;">[m0nkrus]</span></div>
               <div class="date">September 12, 2025</div>
             </div>
           </td>
-          <td style="text-align:right">
-            <a class="btn" href="https://ouo.io/H1MolP" target="_blank" rel="noopener">Download</a>
+          <td style="text-align: right;">
+            <a class="btn btn-primary" href="https://ouo.io/H1MolP" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+            <a class="btn btn-secondary" href="https://helpx.adobe.com/premiere-pro/release-note/release-notes-premiere-pro.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
           </td>
         </tr>
-
-        <!-- Premiere Pro for Mac -->
-        <tr>
+        <tr class="product-row">
           <td>
-            <div class="product"><div class="icon" style="background:linear-gradient(#ff4e7a,#b22f5f)">Pr</div></div>
+            <img class="icon" src="https://webobjects2.cdw.com/is/image/CDW/6960112?$product-main$" alt="Adobe Premiere Pro Icon">
           </td>
           <td>
             <div class="meta">
-              <div class="ver">Adobe Premiere Pro 2025 for Mac — 25.4.1</div>
+              <div class="ver">Adobe Premiere Pro 2025 for Mac — 25.4.1 <span style="color: red;">[m0nkrus]</span></div>
               <div class="date">September 8, 2025</div>
             </div>
           </td>
-          <td style="text-align:right">
-            <a class="btn" href="https://ouo.io/H1MolP" target="_blank" rel="noopener">Download</a>
+          <td style="text-align: right;">
+            <a class="btn btn-primary" href="https://ouo.io/H1MolP" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+            <a class="btn btn-secondary" href="https://helpx.adobe.com/premiere-pro/release-note/release-notes-premiere-pro.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
           </td>
         </tr>
-
+        <tr>
+          <td colspan="3"><h2>[Patching🛠️]</h2></td>
+        </tr>
+        <tr class="product-row">
+          <td>
+            <img class="icon" src="https://lemmy.dbzer0.com/pictrs/image/5275f3fb-b51d-46b0-9c50-1bd0bdfbdb61.webp?format=webp" alt="GenP Icon">
+          </td>
+          <td>
+            <div class="meta">
+              <div class="ver"><span style="color: blue;">GenP</span></div>
+              <div class="description">GenP is an unofficial utility that patches Adobe Creative Cloud applications, enabling users to bypass trial restrictions and use the software without activation keys. By modifying local licensing DLLs, it replaces Adobe's online verification calls and can disable the Adobe Genuine Software Integrity Service (AGSIS) to prevent license checks.</div>
+            </div>
+          </td>
+          <td style="text-align: right;">
+            <a class="btn btn-primary" href="https://gen.paramore.su/#downloads" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+          </td>
+        </tr>
       </tbody>
     </table>
 
-    <script>
-      // Ensure primary buttons show a consistent "Download" label at runtime (keeps retro HTML friendly + dynamic rename)
-      document.addEventListener('DOMContentLoaded', function(){
-        document.querySelectorAll('a.btn:not(.secondary)').forEach(function(el){ el.textContent = 'Download'; });
-      });
-    </script>
+    <div class="pagination">
+      <a href="#" class="page-btn active">1</a>
+      <a href="#" class="page-btn">2</a>
+      <a href="#" class="page-btn">3</a>
+    </div>
 
     <footer>
-      <div>.</div>
+      <p> | Last updated on 2.11.2025</p>
     </footer>
   </div>
+
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <h2>Important Notice: File Password and Extraction Guide</h2>
+      <h2>Password for Every RAR File: The password for all downloadable RAR files on this site is <span style="color: red;">123</span>.</h2>
+      <p>We created this popup warning because we've received too many inquiries from users asking for the password. To avoid confusion and save time, please note this information before downloading any files. All files are protected with this simple password to ensure basic security during distribution.</p>
+      <p>If you don't have software to extract RAR files, we recommend using WinRAR, a popular and reliable tool for handling compressed archives.</p>
+      <h3>Guide to Install WinRAR:</h3>
+      <ol>
+        <li>Visit the official WinRAR website: <a href="https://www.win-rar.com/download.html" target="_blank" rel="noopener">https://www.win-rar.com/download.html</a>.</li>
+        <li>Download the lam0nkrus version suitable for your operating system (Windows, macOS, or Linux).</li>
+        <li>Run the installer file and follow the on-screen instructions:</li>
+          <ul>
+            <li>Accept the license agreement.</li>
+            <li>Choose the installation directory (default is fine for most users).</li>
+            <li>Select file associations (ensure RAR is selected).</li>
+            <li>Complete the installation.</li>
+          </ul>
+        <li>Once installed, open WinRAR.</li>
+      </ol>
+      <h3>How to Extract a RAR File with Password:</h3>
+      <ol>
+        <li>Right-click on the downloaded RAR file and select "Extract Here" or "Extract to [folder name]" from the WinRAR context menu.</li>
+        <li>When prompted for a password, enter <strong>123</strong> and click OK.</li>
+        <li>The files will be extracted to the chosen location.</li>
+      </ol>
+      <p><strong>Tips:</strong></p>
+      <ul>
+        <li>WinRAR is shareware; you can use it for free, but it may prompt for purchase after a trial period—basic functionality remains available.</li>
+        <li>If you encounter issues, ensure your antivirus isn't blocking the extraction.</li>
+        <li>For alternatives, consider 7-Zip (free and open-source): Download from <a href="https://www.7-zip.org/" target="_blank" rel="noopener">https://www.7-zip.org/</a>. The extraction process is similar.</li>
+        <li>Always download software from official sources to avoid malware.</li>
+      </ul>
+      <button id="closeBtn" disabled>Close (wait 3 seconds)</button>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('theme-switch');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    const searchInput = document.getElementById('searchInput');
+    const productList = document.getElementById('productList');
+    const rows = productList.getElementsByClassName('product-row');
+
+    searchInput.addEventListener('keyup', () => {
+      const filter = searchInput.value.toLowerCase();
+      for (let row of rows) {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(filter) ? '' : 'none';
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a.btn-primary').forEach(el => {
+        if (!el.innerHTML.includes('Download')) {
+          el.innerHTML = '<i class="fas fa-download"></i> Download';
+        }
+      });
+
+      const modal = document.getElementById('passwordModal');
+      const closeBtn = document.getElementById('closeBtn');
+      modal.style.display = 'block';
+
+      setTimeout(() => {
+        closeBtn.disabled = false;
+        closeBtn.classList.add('enabled');
+        closeBtn.textContent = 'Close';
+      }, 3000);
+
+      closeBtn.addEventListener('click', () => {
+        if (!closeBtn.disabled) {
+          modal.style.display = 'none';
+        }
+      });
+
+      window.addEventListener('click', (event) => {
+        if (event.target === modal && !closeBtn.disabled) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+
+    function placeholderFunc1() { console.log('Placeholder 1'); }
+    function placeholderFunc2() { console.log('Placeholder 2'); }
+    function placeholderFunc3() { console.log('Placeholder 3'); }
+    function placeholderFunc4() { console.log('Placeholder 4'); }
+    function placeholderFunc5() { console.log('Placeholder 5'); }
+    function placeholderFunc6() { console.log('Placeholder 6'); }
+    function placeholderFunc7() { console.log('Placeholder 7'); }
+    function placeholderFunc8() { console.log('Placeholder 8'); }
+    function placeholderFunc9() { console.log('Placeholder 9'); }
+    function placeholderFunc10() { console.log('Placeholder 10'); }
+    function placeholderFunc11() { console.log('Placeholder 11'); }
+    function placeholderFunc12() { console.log('Placeholder 12'); }
+    function placeholderFunc13() { console.log('Placeholder 13'); }
+    function placeholderFunc14() { console.log('Placeholder 14'); }
+    function placeholderFunc15() { console.log('Placeholder 15'); }
+    function placeholderFunc16() { console.log('Placeholder 16'); }
+    function placeholderFunc17() { console.log('Placeholder 17'); }
+    function placeholderFunc18() { console.log('Placeholder 18'); }
+    function placeholderFunc19() { console.log('Placeholder 19'); }
+    function placeholderFunc20() { console.log('Placeholder 20'); }
+    function placeholderFunc21() { console.log('Placeholder 21'); }
+    function placeholderFunc22() { console.log('Placeholder 22'); }
+    function placeholderFunc23() { console.log('Placeholder 23'); }
+    function placeholderFunc24() { console.log('Placeholder 24'); }
+    function placeholderFunc25() { console.log('Placeholder 25'); }
+    function placeholderFunc26() { console.log('Placeholder 26'); }
+    function placeholderFunc27() { console.log('Placeholder 27'); }
+    function placeholderFunc28() { console.log('Placeholder 28'); }
+    function placeholderFunc29() { console.log('Placeholder 29'); }
+    function placeholderFunc30() { console.log('Placeholder 30'); }
+    function placeholderFunc31() { console.log('Placeholder 31'); }
+    function placeholderFunc32() { console.log('Placeholder 32'); }
+    function placeholderFunc33() { console.log('Placeholder 33'); }
+    function placeholderFunc34() { console.log('Placeholder 34'); }
+    function placeholderFunc35() { console.log('Placeholder 35'); }
+    function placeholderFunc36() { console.log('Placeholder 36'); }
+    function placeholderFunc37() { console.log('Placeholder 37'); }
+    function placeholderFunc38() { console.log('Placeholder 38'); }
+    function placeholderFunc39() { console.log('Placeholder 39'); }
+    function placeholderFunc40() { console.log('Placeholder 40'); }
+    function placeholderFunc41() { console.log('Placeholder 41'); }
+    function placeholderFunc42() { console.log('Placeholder 42'); }
+    function placeholderFunc43() { console.log('Placeholder 43'); }
+    function placeholderFunc44() { console.log('Placeholder 44'); }
+    function placeholderFunc45() { console.log('Placeholder 45'); }
+    function placeholderFunc46() { console.log('Placeholder 46'); }
+    function placeholderFunc47() { console.log('Placeholder 47'); }
+    function placeholderFunc48() { console.log('Placeholder 48'); }
+    function placeholderFunc49() { console.log('Placeholder 49'); }
+    function placeholderFunc50() { console.log('Placeholder 50'); }
+  </script>
 </body>
 </html>
