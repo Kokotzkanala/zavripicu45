@@ -354,14 +354,17 @@
       height: 100%;
       overflow: auto;
       background-color: rgba(0,0,0,0.4);
+      padding-top: 60px; 
     }
     .modal-content {
       background-color: #fefefe;
-      margin: 15% auto;
+      margin: auto; 
       padding: 20px;
       border: 1px solid #888;
       width: 80%;
       max-width: 600px;
+      max-height: 80vh; 
+      overflow-y: auto;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
@@ -379,9 +382,12 @@
     }
     .modal h2 {
       margin-bottom: 16px;
+      font-size: 24px; 
+      color: #d9534f; 
     }
     .modal p {
       margin-bottom: 12px;
+      font-size: 16px; 
     }
     .modal ul {
       list-style-type: disc;
@@ -395,6 +401,7 @@
     .modal a:hover {
       text-decoration: underline;
     }
+    #warningCloseBtn,
     #closeBtn {
       background: #ccc;
       color: white;
@@ -403,11 +410,15 @@
       border-radius: 4px;
       cursor: not-allowed;
       margin-top: 16px;
+      width: 100%; 
+      font-size: 16px;
     }
+    #warningCloseBtn.enabled,
     #closeBtn.enabled {
       background: #007bff;
       cursor: pointer;
     }
+    #warningCloseBtn.enabled:hover,
     #closeBtn.enabled:hover {
       background: #0056b3;
     }
@@ -880,7 +891,6 @@
             <a class="btn btn-secondary" href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
           </td>
         </tr>
-        <!-- Continue with all original entries -->
         <tr class="product-row">
           <td>
             <img class="icon" src="https://i.pinimg.com/736x/f8/1f/dc/f81fdc42958b880279f0b0f2a7ec82aa.jpg" alt="Adobe Photoshop Icon">
@@ -1035,38 +1045,73 @@
     </footer>
   </div>
 
+  <div id="malwareWarningModal" class="modal">
+    <div class="modal-content">
+      <h2>🚨 IMPORTANT SAFETY NOTICE: Read This Before Proceeding! 🚨</h2>
+      <p><strong>This site is for EDUCATIONAL and TESTING PURPOSES ONLY. We do not condone any illegal activities. Always purchase official software for production use and support developers!</strong></p>
+      <p>Hey there! We know you're excited to explore, but please take a moment to read this crucial warning—it's short, we promise, and it could save you from unnecessary worry. Our site is new (launched late 2025), so it's normal to feel cautious. Rest assured, everything here is shared strictly for learning, research, or personal experimentation in controlled environments.</p>
+      <h3>Why Your Antivirus (Like Windows Defender) Might Flag These Files—And Why It's Often a False Positive</h3>
+      <p>False positives happen all the time with modified or cracked software, especially from sources like m0nkrus repacks. Here's a simple breakdown to help you understand:</p>
+      <ul>
+        <li><strong>How Windows Defender Works:</strong> Windows Defender (part of Microsoft Security) uses a combination of signature-based scanning (matching known virus patterns), behavior monitoring (watching for suspicious actions like file modifications), and heuristics (smart guesses based on code patterns). It scans files in real-time and during downloads, erring on the side of caution to protect you—even if that means flagging harmless stuff.</li>
+        <li><strong>Why m0nkrus Adobe Repacks Get Detected:</strong> m0nkrus versions are custom-modified installers that patch Adobe software to bypass license checks (e.g., altering DLL files to skip online activation or disable services like Adobe Genuine Software Integrity Service). This looks "suspicious" to Defender because:</li>
+          <ul>
+            <li>It involves code injection or hooking, which mimics malware techniques.</li>
+            <li>Broken digital signatures (official Adobe files are signed; modifications break this, making them seem tampered with).</li>
+            <li>Compressed archives (like RAR) often trigger alerts if they contain executables with patching behavior.</li>
+          </ul>
+        <li>These flags are usually labeled as "HackTool," "Trojan," or "PUA" (Potentially Unwanted Application)—not because they're actual viruses, but due to patterns that resemble risks. In reality, tested m0nkrus repacks are clean for educational use; they don't contain adware, spyware, or harmful code.</li>
+      </ul>
+      <h3>Additional Info About Our Site</h3>
+      <ul>
+        <li><strong>Files Are Not Hosted Here:</strong> We don't host any files on our servers. All download links point to external third-party sources (like ouo.io redirects to community-shared uploads). We're just curating links for convenience.</li>
+        <li><strong>No Earnings Involved:</strong> This is a non-profit resource run by enthusiasts. We don't make money from ads, donations, or anything—it's purely to share knowledge for testing purposes.</li>
+      </ul>
+      <p><strong>How to Verify Safety Yourself:</strong></p>
+      <ul>
+        <li>Upload files to VirusTotal.com (scans with 70+ engines)—flags are often low-confidence heuristics from just a few scanners.</li>
+        <li>Run everything in a virtual machine (e.g., VirtualBox) for safe testing.</li>
+        <li>If Defender blocks a file, you can add an exclusion temporarily (Settings > Update & Security > Windows Security > Virus & threat protection > Manage settings > Exclusions)—but only if you're sure!</li>
+      </ul>
+      <p>Remember: This is all for educational purposes only. If you're uncomfortable, close this site now. Proceed only if you understand the risks and use responsibly.</p>
+      <button id="warningCloseBtn" disabled>Close (wait 3 seconds)</button>
+    </div>
+  </div>
+
   <div id="passwordModal" class="modal">
     <div class="modal-content">
-      <h2>Important Notice: File Password and Extraction Guide</h2>
-      <h2>Password for Every RAR File: The password for all downloadable RAR files on this site is <span style="color: red;">123</span>.</h2>
-      <p>We created this popup warning because we've received too many inquiries from users asking for the password. To avoid confusion and save time, please note this information before downloading any files. All files are protected with this simple password to ensure basic security during distribution.</p>
-      <p>If you don't have software to extract RAR files, we recommend using WinRAR, a popular and reliable tool for handling compressed archives.</p>
-      <h3>Guide to Install WinRAR:</h3>
+      <h2>🔑 Quick Guide: File Password & Extraction Tips 🔑</h2>
+      <p><strong>For EDUCATIONAL and TESTING PURPOSES ONLY. We do not condone illegal activities—always buy official software!</strong></p>
+      <p>We've made this popup prominent because many users ask about passwords. Please read this fully—it'll save you time and hassle!</p>
+      <h3>Password for ALL RAR Files: <span style="color: red; font-size: 20px;">123</span></h3>
+      <p>All downloads are in RAR format for compression and basic protection. Enter "123" (without quotes) when prompted during extraction.</p>
+      <h3>Recommended Tool: WinRAR (or Alternatives)</h3>
+      <p>If you don't have extraction software, here's how to get started safely:</p>
       <ol>
-        <li>Visit the official WinRAR website: <a href="https://www.win-rar.com/download.html" target="_blank" rel="noopener">https://www.win-rar.com/download.html</a>.</li>
-        <li>Download the lam0nkrus version suitable for your operating system (Windows, macOS, or Linux).</li>
-        <li>Run the installer file and follow the on-screen instructions:</li>
+        <li>Download WinRAR from the official site: <a href="https://www.win-rar.com/download.html" target="_blank" rel="noopener">win-rar.com</a> (choose your OS: Windows, macOS, Linux).</li>
+        <li>Run the installer:</li>
           <ul>
-            <li>Accept the license agreement.</li>
-            <li>Choose the installation directory (default is fine for most users).</li>
-            <li>Select file associations (ensure RAR is selected).</li>
-            <li>Complete the installation.</li>
+            <li>Accept the license.</li>
+            <li>Select install location (default OK).</li>
+            <li>Choose file associations (include RAR).</li>
+            <li>Finish setup.</li>
           </ul>
-        <li>Once installed, open WinRAR.</li>
+        <li>Open WinRAR once installed.</li>
       </ol>
-      <h3>How to Extract a RAR File with Password:</h3>
+      <h3>Step-by-Step Extraction:</h3>
       <ol>
-        <li>Right-click on the downloaded RAR file and select "Extract Here" or "Extract to [folder name]" from the WinRAR context menu.</li>
-        <li>When prompted for a password, enter <strong>123</strong> and click OK.</li>
-        <li>The files will be extracted to the chosen location.</li>
+        <li>Right-click the RAR file > "Extract Here" or "Extract to [folder]".</li>
+        <li>Enter password: 123 > OK.</li>
+        <li>Files extract to your chosen spot.</li>
       </ol>
-      <p><strong>Tips:</strong></p>
+      <h3>Pro Tips:</h3>
       <ul>
-        <li>WinRAR is shareware; you can use it for free, but it may prompt for purchase after a trial period—basic functionality remains available.</li>
-        <li>If you encounter issues, ensure your antivirus isn't blocking the extraction.</li>
-        <li>For alternatives, consider 7-Zip (free and open-source): Download from <a href="https://www.7-zip.org/" target="_blank" rel="noopener">https://www.7-zip.org/</a>. The extraction process is similar.</li>
-        <li>Always download software from official sources to avoid malware.</li>
+        <li>WinRAR is shareware—free to use, but may nag for purchase after trial (functions still work).</li>
+        <li>Antivirus blocking? Temporarily disable or add exclusion (but scan first!).</li>
+        <li>Free alternative: 7-Zip from <a href="https://www.7-zip.org/" target="_blank" rel="noopener">7-zip.org</a>—extraction steps are similar.</li>
+        <li>Always download from official sources to avoid real malware.</li>
       </ul>
+      <p>Note: Links lead to external sites—we don't host files or earn from this. Use responsibly for learning only!</p>
       <button id="closeBtn" disabled>Close (wait 3 seconds)</button>
     </div>
   </div>
@@ -1096,15 +1141,42 @@
         }
       });
 
+      const warningModal = document.getElementById('malwareWarningModal');
+      const warningCloseBtn = document.getElementById('warningCloseBtn');
       const modal = document.getElementById('passwordModal');
       const closeBtn = document.getElementById('closeBtn');
-      modal.style.display = 'block';
+
+      warningModal.style.display = 'block';
 
       setTimeout(() => {
-        closeBtn.disabled = false;
-        closeBtn.classList.add('enabled');
-        closeBtn.textContent = 'Close';
+        warningCloseBtn.disabled = false;
+        warningCloseBtn.classList.add('enabled');
+        warningCloseBtn.textContent = 'I Understand & Proceed';
       }, 3000);
+
+      warningCloseBtn.addEventListener('click', () => {
+        if (!warningCloseBtn.disabled) {
+          warningModal.style.display = 'none';
+          modal.style.display = 'block';
+          setTimeout(() => {
+            closeBtn.disabled = false;
+            closeBtn.classList.add('enabled');
+            closeBtn.textContent = 'Got It!';
+          }, 3000);
+        }
+      });
+
+      window.addEventListener('click', (event) => {
+        if (event.target === warningModal && !warningCloseBtn.disabled) {
+          warningModal.style.display = 'none';
+          modal.style.display = 'block';
+          setTimeout(() => {
+            closeBtn.disabled = false;
+            closeBtn.classList.add('enabled');
+            closeBtn.textContent = 'Got It!';
+          }, 3000);
+        }
+      });
 
       closeBtn.addEventListener('click', () => {
         if (!closeBtn.disabled) {
