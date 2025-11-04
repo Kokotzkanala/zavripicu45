@@ -1,1358 +1,596 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Adobe Cracked Downloads</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #f0f4ff, #d9eaff);
-      color: #333;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-    header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-    .logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #ff6b6b, #ee5253);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 32px;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #222;
-    }
-    .lead {
-      font-size: 16px;
-      color: #555;
-      margin-top: 8px;
-    }
-    nav {
-      margin-bottom: 24px;
-    }
-    .nav-bar {
-      background: #f8f9fa;
-      padding: 12px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-    .pill {
-      padding: 8px 16px;
-      background: #e9ecef;
-      border-radius: 20px;
-      font-size: 14px;
-      color: #495057;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .pill i {
-      color: #007bff;
-    }
-    .announcement {
-      background: linear-gradient(135deg, #ffcc00, #ff9900);
-      color: #333;
-      padding: 12px;
-      border-radius: 8px;
-      margin-bottom: 24px;
-      text-align: center;
-      font-weight: 500;
-    }
-    .product-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0 12px;
-    }
-    .product-table th,
-    .product-table td {
-      padding: 16px;
-      text-align: left;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-    .product-row {
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .product-row:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      object-fit: contain;
-      transition: transform 0.3s;
-    }
-    .icon:hover {
-      transform: scale(1.1);
-    }
-    .meta {
-      font-size: 15px;
-      color: #333;
-    }
-    .ver {
-      font-weight: 600;
-      color: #212529;
-    }
-    .date {
-      color: #6c757d;
-      font-size: 13px;
-    }
-    .description {
-      margin-top: 8px;
-      color: #495057;
-      font-size: 14px;
-    }
-    .btn {
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background 0.3s, transform 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #007bff, #0056b3);
-      color: white;
-      border: none;
-    }
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #0056b3, #004085);
-      transform: translateY(-2px);
-    }
-    .btn-secondary {
-      background: linear-gradient(135deg, #6c757d, #495057);
-      color: white;
-      border: none;
-      margin-left: 12px;
-    }
-    .btn-secondary:hover {
-      background: linear-gradient(135deg, #495057, #343a40);
-      transform: translateY(-2px);
-    }
-    footer {
-      margin-top: 32px;
-      text-align: center;
-      font-size: 14px;
-      color: #6c757d;
-      padding: 16px 0;
-      border-top: 1px solid #e9ecef;
-    }
-    body.dark-mode {
-      background: linear-gradient(135deg, #2c3e50, #1a252f);
-      color: #f8f9fa;
-    }
-    body.dark-mode .container {
-      background: #343a40;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-    body.dark-mode h1 {
-      color: #f8f9fa;
-    }
-    body.dark-mode .lead {
-      color: #ced4da;
-    }
-    body.dark-mode .nav-bar {
-      background: #495057;
-    }
-    body.dark-mode .pill {
-      background: #6c757d;
-      color: #f8f9fa;
-    }
-    body.dark-mode .announcement {
-      background: linear-gradient(135deg, #ffcc00, #ff9900);
-      color: #333;
-    }
-    body.dark-mode .product-table td {
-      background: #495057;
-    }
-    body.dark-mode .meta {
-      color: #f8f9fa;
-    }
-    body.dark-mode .ver {
-      color: #e9ecef;
-    }
-    body.dark-mode .date {
-      color: #adb5bd;
-    }
-    body.dark-mode .description {
-      color: #ced4da;
-    }
-    body.dark-mode footer {
-      color: #adb5bd;
-      border-top: 1px solid #495057;
-    }
-    body.dark-mode .modal-content {
-      background-color: #343a40;
-      color: #f8f9fa;
-    }
-    body.dark-mode .close {
-      color: #f8f9fa;
-    }
-    .theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 34px;
-    }
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      transition: .4s;
-      border-radius: 34px;
-    }
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      transition: .4s;
-      border-radius: 50%;
-    }
-    input:checked + .slider {
-      background-color: #2196F3;
-    }
-    input:checked + .slider:before {
-      transform: translateX(26px);
-    }
-    .search-container {
-      margin-bottom: 24px;
-      display: flex;
-      justify-content: center;
-    }
-    .search-input {
-      width: 60%;
-      padding: 12px;
-      border: 1px solid #ced4da;
-      border-radius: 6px 0 0 6px;
-      font-size: 16px;
-    }
-    .search-btn {
-      padding: 12px 20px;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 0 6px 6px 0;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-    }
-    .search-btn:hover {
-      background: #0056b3;
-      transform: scale(1.05);
-    }
-    .pagination {
-      display: flex;
-      justify-content: center;
-      margin-top: 32px;
-      gap: 8px;
-    }
-    .page-btn {
-      padding: 8px 16px;
-      background: #f8f9fa;
-      border: 1px solid #dee2e6;
-      border-radius: 4px;
-      text-decoration: none;
-      color: #007bff;
-      transition: background 0.3s, transform 0.2s;
-    }
-    .page-btn:hover {
-      background: #e9ecef;
-      transform: translateY(-2px);
-    }
-    .page-btn.active {
-      background: #007bff;
-      color: white;
-    }
-    @media (max-width: 768px) {
-      .container {
-        margin: 20px;
-        padding: 16px;
-      }
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      .product-table th,
-      .product-table td {
-        padding: 12px;
-      }
-      .search-input {
-        width: 100%;
-      }
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1001;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.4);
-      padding-top: 60px; 
-    }
-    .modal-content {
-      background-color: #fefefe;
-      margin: auto; 
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-      max-width: 600px;
-      max-height: 80vh; 
-      overflow-y: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .modal h2 {
-      margin-bottom: 16px;
-      font-size: 24px; 
-      color: #d9534f; 
-    }
-    .modal p {
-      margin-bottom: 12px;
-      font-size: 16px; 
-    }
-    .modal ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-bottom: 12px;
-    }
-    .modal a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    .modal a:hover {
-      text-decoration: underline;
-    }
-    #warningCloseBtn,
-    #closeBtn {
-      background: #ccc;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      cursor: not-allowed;
-      margin-top: 16px;
-      width: 100%; 
-      font-size: 16px;
-    }
-    #warningCloseBtn.enabled,
-    #closeBtn.enabled {
-      background: #007bff;
-      cursor: pointer;
-    }
-    #warningCloseBtn.enabled:hover,
-    #closeBtn.enabled:hover {
-      background: #0056b3;
-    }
-    .extra-class-1 { display: none; } 
-    .extra-class-2 { display: none; }
-    .extra-class-3 { display: none; }
-    .extra-class-4 { display: none; }
-    .extra-class-5 { display: none; }
-    .extra-class-6 { display: none; }
-    .extra-class-7 { display: none; }
-    .extra-class-8 { display: none; }
-    .extra-class-9 { display: none; }
-    .extra-class-10 { display: none; }
-    .extra-class-11 { display: none; }
-    .extra-class-12 { display: none; }
-    .extra-class-13 { display: none; }
-    .extra-class-14 { display: none; }
-    .extra-class-15 { display: none; }
-    .extra-class-16 { display: none; }
-    .extra-class-17 { display: none; }
-    .extra-class-18 { display: none; }
-    .extra-class-19 { display: none; }
-    .extra-class-20 { display: none; }
-    .extra-class-21 { display: none; }
-    .extra-class-22 { display: none; }
-    .extra-class-23 { display: none; }
-    .extra-class-24 { display: none; }
-    .extra-class-25 { display: none; }
-    .extra-class-26 { display: none; }
-    .extra-class-27 { display: none; }
-    .extra-class-28 { display: none; }
-    .extra-class-29 { display: none; }
-    .extra-class-30 { display: none; }
-    .extra-class-31 { display: none; }
-    .extra-class-32 { display: none; }
-    .extra-class-33 { display: none; }
-    .extra-class-34 { display: none; }
-    .extra-class-35 { display: none; }
-    .extra-class-36 { display: none; }
-    .extra-class-37 { display: none; }
-    .extra-class-38 { display: none; }
-    .extra-class-39 { display: none; }
-    .extra-class-40 { display: none; }
-    .extra-class-41 { display: none; }
-    .extra-class-42 { display: none; }
-    .extra-class-43 { display: none; }
-    .extra-class-44 { display: none; }
-    .extra-class-45 { display: none; }
-    .extra-class-46 { display: none; }
-    .extra-class-47 { display: none; }
-    .extra-class-48 { display: none; }
-    .extra-class-49 { display: none; }
-    .extra-class-50 { display: none; }
-    .extra-class-51 { display: none; }
-    .extra-class-52 { display: none; }
-    .extra-class-53 { display: none; }
-    .extra-class-54 { display: none; }
-    .extra-class-55 { display: none; }
-    .extra-class-56 { display: none; }
-    .extra-class-57 { display: none; }
-    .extra-class-58 { display: none; }
-    .extra-class-59 { display: none; }
-    .extra-class-60 { display: none; }
-    .extra-class-61 { display: none; }
-    .extra-class-62 { display: none; }
-    .extra-class-63 { display: none; }
-    .extra-class-64 { display: none; }
-    .extra-class-65 { display: none; }
-    .extra-class-66 { display: none; }
-    .extra-class-67 { display: none; }
-    .extra-class-68 { display: none; }
-    .extra-class-69 { display: none; }
-    .extra-class-70 { display: none; }
-    .extra-class-71 { display: none; }
-    .extra-class-72 { display: none; }
-    .extra-class-73 { display: none; }
-    .extra-class-74 { display: none; }
-    .extra-class-75 { display: none; }
-    .extra-class-76 { display: none; }
-    .extra-class-77 { display: none; }
-    .extra-class-78 { display: none; }
-    .extra-class-79 { display: none; }
-    .extra-class-80 { display: none; }
-    .extra-class-81 { display: none; }
-    .extra-class-82 { display: none; }
-    .extra-class-83 { display: none; }
-    .extra-class-84 { display: none; }
-    .extra-class-85 { display: none; }
-    .extra-class-86 { display: none; }
-    .extra-class-87 { display: none; }
-    .extra-class-88 { display: none; }
-    .extra-class-89 { display: none; }
-    .extra-class-90 { display: none; }
-    .extra-class-91 { display: none; }
-    .extra-class-92 { display: none; }
-    .extra-class-93 { display: none; }
-    .extra-class-94 { display: none; }
-    .extra-class-95 { display: none; }
-    .extra-class-96 { display: none; }
-    .extra-class-97 { display: none; }
-    .extra-class-98 { display: none; }
-    .extra-class-99 { display: none; }
-    .extra-class-100 { display: none; }
-    .extra-class-101 { display: none; }
-    .extra-class-102 { display: none; }
-    .extra-class-103 { display: none; }
-    .extra-class-104 { display: none; }
-    .extra-class-105 { display: none; }
-    .extra-class-106 { display: none; }
-    .extra-class-107 { display: none; }
-    .extra-class-108 { display: none; }
-    .extra-class-109 { display: none; }
-    .extra-class-110 { display: none; }
-    .extra-class-111 { display: none; }
-    .extra-class-112 { display: none; }
-    .extra-class-113 { display: none; }
-    .extra-class-114 { display: none; }
-    .extra-class-115 { display: none; }
-    .extra-class-116 { display: none; }
-    .extra-class-117 { display: none; }
-    .extra-class-118 { display: none; }
-    .extra-class-119 { display: none; }
-    .extra-class-120 { display: none; }
-    .extra-class-121 { display: none; }
-    .extra-class-122 { display: none; }
-    .extra-class-123 { display: none; }
-    .extra-class-124 { display: none; }
-    .extra-class-125 { display: none; }
-    .extra-class-126 { display: none; }
-    .extra-class-127 { display: none; }
-    .extra-class-128 { display: none; }
-    .extra-class-129 { display: none; }
-    .extra-class-130 { display: none; }
-    .extra-class-131 { display: none; }
-    .extra-class-132 { display: none; }
-    .extra-class-133 { display: none; }
-    .extra-class-134 { display: none; }
-    .extra-class-135 { display: none; }
-    .extra-class-136 { display: none; }
-    .extra-class-137 { display: none; }
-    .extra-class-138 { display: none; }
-    .extra-class-139 { display: none; }
-    .extra-class-140 { display: none; }
-    .extra-class-141 { display: none; }
-    .extra-class-142 { display: none; }
-    .extra-class-143 { display: none; }
-    .extra-class-144 { display: none; }
-    .extra-class-145 { display: none; }
-    .extra-class-146 { display: none; }
-    .extra-class-147 { display: none; }
-    .extra-class-148 { display: none; }
-    .extra-class-149 { display: none; }
-    .extra-class-150 { display: none; }
-    .extra-class-151 { display: none; }
-    .extra-class-152 { display: none; }
-    .extra-class-153 { display: none; }
-    .extra-class-154 { display: none; }
-    .extra-class-155 { display: none; }
-    .extra-class-156 { display: none; }
-    .extra-class-157 { display: none; }
-    .extra-class-158 { display: none; }
-    .extra-class-159 { display: none; }
-    .extra-class-160 { display: none; }
-    .extra-class-161 { display: none; }
-    .extra-class-162 { display: none; }
-    .extra-class-163 { display: none; }
-    .extra-class-164 { display: none; }
-    .extra-class-165 { display: none; }
-    .extra-class-166 { display: none; }
-    .extra-class-167 { display: none; }
-    .extra-class-168 { display: none; }
-    .extra-class-169 { display: none; }
-    .extra-class-170 { display: none; }
-    .extra-class-171 { display: none; }
-    .extra-class-172 { display: none; }
-    .extra-class-173 { display: none; }
-    .extra-class-174 { display: none; }
-    .extra-class-175 { display: none; }
-    .extra-class-176 { display: none; }
-    .extra-class-177 { display: none; }
-    .extra-class-178 { display: none; }
-    .extra-class-179 { display: none; }
-    .extra-class-180 { display: none; }
-    .extra-class-181 { display: none; }
-    .extra-class-182 { display: none; }
-    .extra-class-183 { display: none; }
-    .extra-class-184 { display: none; }
-    .extra-class-185 { display: none; }
-    .extra-class-186 { display: none; }
-    .extra-class-187 { display: none; }
-    .extra-class-188 { display: none; }
-    .extra-class-189 { display: none; }
-    .extra-class-190 { display: none; }
-    .extra-class-191 { display: none; }
-    .extra-class-192 { display: none; }
-    .extra-class-193 { display: none; }
-    .extra-class-194 { display: none; }
-    .extra-class-195 { display: none; }
-    .extra-class-196 { display: none; }
-    .extra-class-197 { display: none; }
-    .extra-class-198 { display: none; }
-    .extra-class-199 { display: none; }
-    .extra-class-200 { display: none; }
-    .extra-class-201 { display: none; }
-    .extra-class-202 { display: none; }
-    .extra-class-203 { display: none; }
-    .extra-class-204 { display: none; }
-    .extra-class-205 { display: none; }
-    .extra-class-206 { display: none; }
-    .extra-class-207 { display: none; }
-    .extra-class-208 { display: none; }
-    .extra-class-209 { display: none; }
-    .extra-class-210 { display: none; }
-    .extra-class-211 { display: none; }
-    .extra-class-212 { display: none; }
-    .extra-class-213 { display: none; }
-    .extra-class-214 { display: none; }
-    .extra-class-215 { display: none; }
-    .extra-class-216 { display: none; }
-    .extra-class-217 { display: none; }
-    .extra-class-218 { display: none; }
-    .extra-class-219 { display: none; }
-    .extra-class-220 { display: none; }
-    .extra-class-221 { display: none; }
-    .extra-class-222 { display: none; }
-    .extra-class-223 { display: none; }
-    .extra-class-224 { display: none; }
-    .extra-class-225 { display: none; }
-    .extra-class-226 { display: none; }
-    .extra-class-227 { display: none; }
-    .extra-class-228 { display: none; }
-    .extra-class-229 { display: none; }
-    .extra-class-230 { display: none; }
-    .extra-class-231 { display: none; }
-    .extra-class-232 { display: none; }
-    .extra-class-233 { display: none; }
-    .extra-class-234 { display: none; }
-    .extra-class-235 { display: none; }
-    .extra-class-236 { display: none; }
-    .extra-class-237 { display: none; }
-    .extra-class-238 { display: none; }
-    .extra-class-239 { display: none; }
-    .extra-class-240 { display: none; }
-    .extra-class-241 { display: none; }
-    .extra-class-242 { display: none; }
-    .extra-class-243 { display: none; }
-    .extra-class-244 { display: none; }
-    .extra-class-245 { display: none; }
-    .extra-class-246 { display: none; }
-    .extra-class-247 { display: none; }
-    .extra-class-248 { display: none; }
-    .extra-class-249 { display: none; }
-    .extra-class-250 { display: none; }
-    .extra-class-251 { display: none; }
-    .extra-class-252 { display: none; }
-    .extra-class-253 { display: none; }
-    .extra-class-254 { display: none; }
-    .extra-class-255 { display: none; }
-    .extra-class-256 { display: none; }
-    .extra-class-257 { display: none; }
-    .extra-class-258 { display: none; }
-    .extra-class-259 { display: none; }
-    .extra-class-260 { display: none; }
-    .extra-class-261 { display: none; }
-    .extra-class-262 { display: none; }
-    .extra-class-263 { display: none; }
-    .extra-class-264 { display: none; }
-    .extra-class-265 { display: none; }
-    .extra-class-266 { display: none; }
-    .extra-class-267 { display: none; }
-    .extra-class-268 { display: none; }
-    .extra-class-269 { display: none; }
-    .extra-class-270 { display: none; }
-    .extra-class-271 { display: none; }
-    .extra-class-272 { display: none; }
-    .extra-class-273 { display: none; }
-    .extra-class-274 { display: none; }
-    .extra-class-275 { display: none; }
-    .extra-class-276 { display: none; }
-    .extra-class-277 { display: none; }
-    .extra-class-278 { display: none; }
-    .extra-class-279 { display: none; }
-    .extra-class-280 { display: none; }
-    .extra-class-281 { display: none; }
-    .extra-class-282 { display: none; }
-    .extra-class-283 { display: none; }
-    .extra-class-284 { display: none; }
-    .extra-class-285 { display: none; }
-    .extra-class-286 { display: none; }
-    .extra-class-287 { display: none; }
-    .extra-class-288 { display: none; }
-    .extra-class-289 { display: none; }
-    .extra-class-290 { display: none; }
-    .extra-class-291 { display: none; }
-    .extra-class-292 { display: none; }
-    .extra-class-293 { display: none; }
-    .extra-class-294 { display: none; }
-    .extra-class-295 { display: none; }
-    .extra-class-296 { display: none; }
-    .extra-class-297 { display: none; }
-    .extra-class-298 { display: none; }
-    .extra-class-299 { display: none; }
-    .extra-class-300 { display: none; }
-    .extra-class-301 { display: none; }
-    .extra-class-302 { display: none; }
-    .extra-class-303 { display: none; }
-    .extra-class-304 { display: none; }
-    .extra-class-305 { display: none; }
-    .extra-class-306 { display: none; }
-    .extra-class-307 { display: none; }
-    .extra-class-308 { display: none; }
-    .extra-class-309 { display: none; }
-    .extra-class-310 { display: none; }
-    .extra-class-311 { display: none; }
-    .extra-class-312 { display: none; }
-    .extra-class-313 { display: none; }
-    .extra-class-314 { display: none; }
-    .extra-class-315 { display: none; }
-    .extra-class-316 { display: none; }
-    .extra-class-317 { display: none; }
-    .extra-class-318 { display: none; }
-    .extra-class-319 { display: none; }
-    .extra-class-320 { display: none; }
-    .extra-class-321 { display: none; }
-    .extra-class-322 { display: none; }
-    .extra-class-323 { display: none; }
-    .extra-class-324 { display: none; }
-    .extra-class-325 { display: none; }
-    .extra-class-326 { display: none; }
-    .extra-class-327 { display: none; }
-    .extra-class-328 { display: none; }
-    .extra-class-329 { display: none; }
-    .extra-class-330 { display: none; }
-    .extra-class-331 { display: none; }
-    .extra-class-332 { display: none; }
-    .extra-class-333 { display: none; }
-    .extra-class-334 { display: none; }
-    .extra-class-335 { display: none; }
-    .extra-class-336 { display: none; }
-    .extra-class-337 { display: none; }
-    .extra-class-338 { display: none; }
-    .extra-class-339 { display: none; }
-    .extra-class-340 { display: none; }
-    .extra-class-341 { display: none; }
-    .extra-class-342 { display: none; }
-    .extra-class-343 { display: none; }
-    .extra-class-344 { display: none; }
-    .extra-class-345 { display: none; }
-    .extra-class-346 { display: none; }
-    .extra-class-347 { display: none; }
-    .extra-class-348 { display: none; }
-    .extra-class-349 { display: none; }
-    .extra-class-350 { display: none; }
-    .extra-class-351 { display: none; }
-    .extra-class-352 { display: none; }
-    .extra-class-353 { display: none; }
-    .extra-class-354 { display: none; }
-    .extra-class-355 { display: none; }
-    .extra-class-356 { display: none; }
-    .extra-class-357 { display: none; }
-    .extra-class-358 { display: none; }
-    .extra-class-359 { display: none; }
-    .extra-class-360 { display: none; }
-    .extra-class-361 { display: none; }
-    .extra-class-362 { display: none; }
-    .extra-class-363 { display: none; }
-    .extra-class-364 { display: none; }
-    .extra-class-365 { display: none; }
-    .extra-class-366 { display: none; }
-    .extra-class-367 { display: none; }
-    .extra-class-368 { display: none; }
-    .extra-class-369 { display: none; }
-    .extra-class-370 { display: none; }
-    .extra-class-371 { display: none; }
-    .extra-class-372 { display: none; }
-    .extra-class-373 { display: none; }
-    .extra-class-374 { display: none; }
-    .extra-class-375 { display: none; }
-    .extra-class-376 { display: none; }
-    .extra-class-377 { display: none; }
-    .extra-class-378 { display: none; }
-    .extra-class-379 { display: none; }
-    .extra-class-380 { display: none; }
-    .extra-class-381 { display: none; }
-    .extra-class-382 { display: none; }
-    .extra-class-383 { display: none; }
-    .extra-class-384 { display: none; }
-    .extra-class-385 { display: none; }
-    .extra-class-386 { display: none; }
-    .extra-class-387 { display: none; }
-    .extra-class-388 { display: none; }
-    .extra-class-389 { display: none; }
-    .extra-class-390 { display: none; }
-    .extra-class-391 { display: none; }
-    .extra-class-392 { display: none; }
-    .extra-class-393 { display: none; }
-    .extra-class-394 { display: none; }
-    .extra-class-395 { display: none; }
-    .extra-class-396 { display: none; }
-    .extra-class-397 { display: none; }
-    .extra-class-398 { display: none; }
-    .extra-class-399 { display: none; }
-    .extra-class-400 { display: none; }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="INTERPOL COORDINATED SEIZURE: Global domain seizure of https://adobecrackeddownloads.linkpc.net under ICC warrant for mass copyright infringement, cybercrime, and ties to international hacking forums.">
+    <meta name="keywords" content="interpol, seizure, warrant, adobe, piracy, gofile, torrent, cybercrime, hacking forums, intelbroker, fbi wanted, fraud, ddos, botnet, copyright, raid, international">
+    <title>INTERPOL GLOBAL SEIZURE - ICC WARRANT #2025-INT-4471</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            background: #0a1a38;
+            color: #e8e8e8;
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><rect width="120" height="120" fill="%230a1a38"/><path d="M0,60 L120,60 M60,0 L60,120" stroke="%231a2f5a" stroke-width="1.5"/></svg>');
+            background-attachment: fixed;
+            background-size: 120px;
+        }
+        .container {
+            max-width: 1400px;
+            width: 100%;
+            background: #0f274f;
+            border: 5px solid #001f4d;
+            border-top: 12px solid #0033a0;
+            border-bottom: 12px solid #0033a0;
+            border-radius: 0;
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.95), inset 0 0 40px rgba(0, 51, 160, 0.18);
+            padding: 45px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .interpol-seal {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 160px;
+            opacity: 0.14;
+            z-index: 0;
+            filter: brightness(1.6);
+        }
+        .header {
+            text-align: center;
+            padding: 45px 30px;
+            border-bottom: 5px solid #0033a0;
+            margin-bottom: 45px;
+            position: relative;
+            z-index: 1;
+        }
+        .badge {
+            display: inline-block;
+            background: #0033a0;
+            color: #ffffff;
+            padding: 18px 60px;
+            font-weight: 900;
+            font-size: 2rem;
+            border-radius: 0;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            box-shadow: 0 8px 20px rgba(0, 51, 160, 0.8);
+            border: 4px solid #ffffff;
+            animation: pulse-interpol 2.8s infinite;
+        }
+        @keyframes pulse-interpol {
+            0% { box-shadow: 0 8px 20px rgba(0, 51, 160, 0.8); }
+            50% { box-shadow: 0 12px 35px rgba(0, 51, 160, 1.2); }
+            100% { box-shadow: 0 8px 20px rgba(0, 51, 160, 0.8); }
+        }
+        h1 {
+            font-size: 4.8rem;
+            color: #ffffff;
+            text-shadow: 0 0 18px rgba(0, 51, 160, 1), 0 0 35px rgba(255, 255, 255, 0.5);
+            margin: 22px 0;
+            text-transform: uppercase;
+            letter-spacing: 7px;
+            font-weight: 900;
+        }
+        h2 {
+            font-size: 2.3rem;
+            color: #0033a0;
+            margin: 40px 0 22px;
+            border-bottom: 4px solid #0033a0;
+            padding-bottom: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        p {
+            margin: 20px 0;
+            text-align: justify;
+            font-size: 1.2rem;
+        }
+        .warning {
+            background: linear-gradient(135deg, #1a002b, #2b0000);
+            border-left: 12px solid #0033a0;
+            padding: 32px;
+            margin: 35px 0;
+            border-radius: 0;
+            font-weight: bold;
+            color: #ffdddd;
+            box-shadow: 0 0 25px rgba(0, 51, 160, 0.7);
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            letter-spacing: 1.5px;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 60px;
+            margin: 60px 0;
+            padding: 35px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 3px solid #0033a0;
+            border-radius: 0;
+        }
+        .logo {
+            height: 120px;
+            filter: brightness(1.5) contrast(1.4);
+            transition: all 0.6s ease;
+        }
+        .logo:hover {
+            filter: brightness(2) contrast(1.7);
+            transform: scale(1.2);
+        }
+        .ip-log {
+            background: #000;
+            color: #0f0;
+            padding: 35px;
+            font-family: 'Courier New', monospace;
+            border: 5px solid #0033a0;
+            border-radius: 0;
+            margin: 40px 0;
+            overflow-x: auto;
+            white-space: pre;
+            font-size: 1.05rem;
+            box-shadow: 0 0 30px rgba(0, 51, 160, 0.9);
+            animation: glow-border-interpol 2.5s infinite;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        @keyframes glow-border-interpol {
+            0%, 100% { border-color: #0033a0; box-shadow: 0 0 30px rgba(0, 51, 160, 0.9); }
+            50% { border-color: #0066ff; box-shadow: 0 0 50px rgba(0, 102, 255, 1.2); }
+        }
+        .footer {
+            text-align: center;
+            margin-top: 80px;
+            padding: 40px;
+            border-top: 5px solid #0033a0;
+            font-size: 1.1rem;
+            color: #cccccc;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .stamp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-22deg);
+            font-size: 9.5rem;
+            color: rgba(0, 51, 160, 0.25);
+            font-weight: 900;
+            text-transform: uppercase;
+            pointer-events: none;
+            z-index: 0;
+            font-family: 'Impact', sans-serif;
+            text-shadow: 6px 6px 12px rgba(0,0,0,0.95);
+            letter-spacing: 12px;
+        }
+        .legal-text {
+            font-size: 1rem;
+            color: #bbbbbb;
+            line-height: 1.8;
+        }
+        .raid-timeline {
+            position: relative;
+            max-width: 100%;
+            margin: 70px 0;
+        }
+        .raid-timeline::before {
+            content: '';
+            position: absolute;
+            width: 7px;
+            background: #0033a0;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3.5px;
+            box-shadow: 0 0 25px rgba(0, 51, 160, 1);
+        }
+        .raid-item {
+            padding: 25px 70px;
+            position: relative;
+            background: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .raid-item:nth-child(odd) { left: 0; }
+        .raid-item:nth-child(even) { left: 50%; }
+        .raid-item::after {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background: #0033a0;
+            border: 7px solid #ffffff;
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 25px rgba(0, 51, 160, 1.2);
+        }
+        .raid-item:nth-child(even)::after { left: -17.5px; }
+        .raid-item:nth-child(odd)::after { right: -17.5px; }
+        .raid-content {
+            padding: 35px;
+            background: rgba(15, 39, 79, 0.97);
+            border-radius: 0;
+            box-shadow: 0 0 30px rgba(0, 51, 160, 0.6);
+            border: 3px solid #0033a0;
+        }
+        .raid-content h3 {
+            color: #ffffff;
+            margin-bottom: 14px;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+        }
+        .raid-content p {
+            font-size: 1.15rem;
+            color: #e8e8e8;
+            line-height: 1.9;
+        }
+        .disclaimer {
+            font-size: 0.95rem;
+            color: #999999;
+            text-align: center;
+            margin-top: 100px;
+            padding: 35px;
+            border-top: 3px dashed #666666;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .scroll-banner {
+            background: #0033a0;
+            color: #ffffff;
+            padding: 20px;
+            font-weight: 900;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            margin: 35px 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            box-shadow: 0 0 30px rgba(0, 51, 160, 1);
+        }
+        .scroll-banner span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: interpol-scroll 40s linear infinite;
+        }
+        @keyframes interpol-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .evidence-box {
+            background: rgba(0, 51, 160, 0.15);
+            border: 4px dashed #0033a0;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 0;
+        }
+        .contact-box {
+            background: rgba(0, 0, 0, 0.8);
+            border: 3px solid #0033a0;
+            padding: 30px;
+            margin: 50px 0;
+            border-radius: 0;
+            text-align: center;
+        }
+        .contact-box h3 {
+            color: #ffffff;
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+        .contact-box p {
+            margin: 12px 0;
+            font-size: 1.15rem;
+            color: #ffdddd;
+        }
+        .blink-warning {
+            animation: blink-interpol 1.8s infinite;
+            color: #ff5555;
+            font-weight: 900;
+        }
+        @keyframes blink-interpol {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 35px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+        }
+        .data-table th {
+            background: #0033a0;
+            color: #ffffff;
+            padding: 18px;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .data-table td {
+            background: rgba(15, 39, 79, 0.85);
+            padding: 15px 18px;
+            border-bottom: 2px solid #0033a0;
+        }
+        .data-table tr:hover td {
+            background: rgba(0, 51, 160, 0.4);
+        }
+        .seal-watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 14rem;
+            color: rgba(0, 51, 160, 0.06);
+            font-weight: 900;
+            text-transform: uppercase;
+            pointer-events: none;
+            z-index: -1;
+            font-family: 'Arial Black', sans-serif;
+            letter-spacing: 18px;
+        }
+        .torrent-evidence {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #0033a0;
+            padding: 25px;
+            margin: 30px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+        }
+        .future-takedowns {
+            background: linear-gradient(135deg, #330000, #001133);
+            border: 3px solid #0033a0;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0;
+        }
+        .future-takedowns h3 {
+            color: #ff5555;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .future-takedowns ul {
+            padding-left: 30px;
+            font-size: 1.1rem;
+        }
+        .hacker-profile {
+            background: rgba(139, 0, 0, 0.2);
+            border: 2px solid #8b0000;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0;
+        }
+        .hacker-profile h3 {
+            color: #ff0000;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+        .hacker-profile ul {
+            padding-left: 25px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .domain-notice {
+            background: rgba(0, 0, 0, 0.9);
+            border: 3px solid #ff0000;
+            padding: 30px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            color: #ffdddd;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
 </head>
 <body>
-  <div class="theme-toggle">
-    <label class="switch">
-      <input type="checkbox" id="theme-switch">
-      <span class="slider"></span>
-    </label>
-  </div>
-  <div class="container">
-    <header>
-      <div class="logo">🏴‍☠️</div>
-      <div>
-        <h1>Adobe Cracked Downloads</h1>
-        <p class="lead"> </p>
-      </div>
-    </header>
+    <div class="seal-watermark">INTERPOL</div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Interpol_Logo.svg" alt="INTERPOL Seal" class="interpol-seal">
 
-    <nav>
-      <div class="nav-bar">
-        <div class="pill"><i class="fas fa-lock"></i>PASSWORD FOR EVERY FILE IS 123.</div>
-        <div class="pill"><i class="fab fa-reddit-alien"></i><a href="https://old.reddit.com/r/Piracy/wiki/megathread" target="_blank" rel="noopener">Piracy Megathread</a></div>
-        <div class="pill"><i class="fab fa-reddit-alien"></i><a href="https://rentry.org/pgames" target="_blank" rel="noopener">Game Piracy Megathread</a></div>
-      </div>
-    </nav>
-
-    <div class="announcement">
-      More softwares coming soon!
+    <div class="scroll-banner">
+        <span>GLOBAL SEIZURE OPERATION EXPANDING - HTTPS://ADOBECRACKEDDOWNLOADS.LINKPC.NET SEIZED - ALL ACCESS LOGGED - HACKING FORUMS INFILTRATED - FBI WANTED SUSPECTS LINKED - $50M+ FRAUD & DDOS EMPIRE DISMANTLED - ICC WARRANT #2025-INT-4471 - ADDITIONAL DOMAINS TARGETED - DO NOT INTERFERE</span>
     </div>
 
-    <div class="search-container">
-      <input type="text" id="searchInput" class="search-input" placeholder="Search products...">
-      <button class="search-btn"><i class="fas fa-search"></i></button>
+    <div class="container">
+        <div class="stamp">SEIZED BY INTERPOL</div>
+        
+        <div class="header">
+            <div class="badge blink-warning">INTERNATIONAL SEIZURE NOTICE</div>
+            <h1>DOMAIN SEIZED</h1>
+            <p class="domain-notice">You are attempting to access the seized domain: <strong>https://adobecrackeddownloads.linkpc.net</strong><br>This site has been permanently shut down under international warrant.</p>
+            <p style="color:#0033a0; font-weight:900; font-size:1.6rem; text-transform:uppercase; letter-spacing:3px;">
+                Pursuant to ICC Search Warrant #2025-INT-4471 • Coordinated by INTERPOL Cybercrime Directorate • Operation "GLOBAL COPYRIGHT SHIELD" Phase IV
+            </p>
+        </div>
+
+        <div class="warning">
+            <p>ALL DIGITAL ACTIVITY LOGGED AND PRESERVED UNDER INTERNATIONAL EVIDENCE PROTOCOLS<br>
+            4,729,118 UNIQUE IP ADDRESSES RECORDED • FULL PACKET CAPTURE • GEOLOCATION ACCURACY 98.9% • ISP COOPERATION MANDATED • GOFILE & TORRENT TRAFFIC INTERCEPTED • HACKING FORUM THREADS INFILTRATED</p>
+        </div>
+
+        <h2>REASONS FOR SEIZURE: DETAILED INVESTIGATION FINDINGS</h2>
+        <p>The domain <strong>https://adobecrackeddownloads.linkpc.net</strong> served as the <strong>central command hub</strong> for a sophisticated international cybercrime syndicate responsible for the largest-scale unauthorized distribution of Adobe Creative Cloud software, alongside other pirated applications, in recorded history. The operation, active from January 2023 to November 2025, violated multiple international treaties, caused Adobe Inc. estimated losses exceeding <strong>$1.8 billion USD</strong>, and was deeply intertwined with underground hacking forums such as BreachForums (Forum-1), Exploit.in, and XSS.is. The syndicate's operators laundered proceeds through cryptocurrency tumblers and used the funds to finance additional criminal enterprises.</p>
+        
+        <p><strong>Primary Violations Identified:</strong></p>
+        <ul style="margin: 30px 0; padding-left: 45px; font-size:1.2rem; line-height:2.1;">
+            <li><strong>Mass Distribution via GoFile & Torrents:</strong> Over 3.2 million cracked installers uploaded to GoFile.io under premium accounts controlled by the syndicate. Torrent files seeded across networks like The Pirate Bay, 1337x, and private trackers, including cracks for Microsoft Office 365, Autodesk AutoCAD, and CorelDRAW suites.</li>
+            <li><strong>Hacking Forum Ties:</strong> Syndicate members posted cracked software and zero-day exploits on BreachForums (administered by arrested hacker IntelBroker) and Exploit.in. Threads advertised "Adobe CC 2025 Full Suite + GenP Patch" with over 500 replies, leading to 1.2 million downloads.</li>
+            <li><strong>Circumvention & Malware Tools:</strong> Custom keygens, patches (GenP, AMTEmu), and hosts file modifiers distributed to bypass licensing. 42% of downloads contained malware for credential theft, crypto-mining, and backdoor access.</li>
+            <li><strong>Financial Fraud & Botnet Operations:</strong> Over <strong>$50 million USD</strong> stolen via phishing kits, ransomware affiliates, and a DDoS-for-hire service powered by a 200,000-device IoT botnet. Proceeds funneled through fake e-commerce sites mimicking legitimate software vendors.</li>
+            <li><strong>Broader Piracy Scope:</strong> Beyond Adobe, the syndicate distributed cracked versions of Windows 11 Pro, Adobe Substance 3D, VMware Workstation, and enterprise tools like SAP and Oracle Database, affecting 192 countries.</li>
+            <li><strong>Global Reach & Impact:</strong> Victims included educational institutions, corporations, and governments. Data breaches from infected downloads exposed 2.1 million personal records.</li>
+        </ul>
+
+        <div class="hacker-profile">
+            <h3>KEY SYNDICATE MEMBERS: ARRESTED & WANTED</h3>
+            <ul style="padding-left: 25px; font-size:1.15rem; line-height:2;">
+                <li><strong>Kai West (a.k.a. IntelBroker):</strong> Arrested February 2025 in France; extradited to U.S. • Admin of BreachForums • Sold stolen data causing $25M+ damages • Linked to Adobe crack threads with 300K+ views • Charged under 18 U.S.C. § 1030.</li>
+                <li><strong>Park Jin Hyok (a.k.a. "Lazarus Group Affiliate"):</strong> FBI Most Wanted • North Korean hacker • Wanted for Sony Pictures hack & WannaCry ransomware • Alleged supplier of botnet infrastructure for DDoS services tied to this syndicate • $5M reward.</li>
+                <li><strong>Evgeniy Mikhailovich Bogachev (a.k.a. "Slavik"):</strong> FBI Most Wanted • Russian cybercriminal • Creator of Zeus banking trojan • Linked to forum posts offering Adobe cracks bundled with malware • $3M reward • Evading capture since 2014.</li>
+                <li><strong>Minh Quốc Nguyễn:</strong> FBI Most Wanted • Vietnamese national • Money laundering via unlicensed crypto exchanges • Laundered $50M+ from piracy sales and fraud • Arrest warrant issued 2024.</li>
+                <li><strong>Nader Saedi (a.k.a. "Turk Server"):</strong> Iranian hacker • Wanted for conspiracy in Mabna Institute hacks • Supplied zero-days for Adobe circumvention tools • Active on Exploit.in • International arrest warrant pending.</li>
+            </ul>
+            <p style="margin-top:20px; font-weight:bold; color:#ff0000;">Additional 17 low-level operators identified; 9 in custody. Rewards up to $10M for information leading to arrests.</p>
+        </div>
+
+        <div class="evidence-box">
+            <p><strong>DETAILED EVIDENCE CATALOG (CLASSIFIED EXCERPT):</strong></p>
+            <table class="data-table">
+                <tr><th>CATEGORY</th><th>DETAILS</th><th>VOLUME</th></tr>
+                <tr><td>GoFile Uploads</td><td>Cracked EXEs/ZIPs/ISOs for Adobe, Microsoft, Autodesk</td><td>3,291,447 files</td></tr>
+                <tr><td>Torrent Files Created</td><td>.torrent metadata with embedded trackers (Pirate Bay, 1337x)</td><td>1,847 unique torrents</td></tr>
+                <tr><td>Hacking Forum Threads</td><td>BreachForums posts by IntelBroker & affiliates</td><td>158 threads, 2.1M views</td></tr>
+                <tr><td>Botnet & DDoS Logs</td><td>IoT devices infected for hire service</td><td>200,000 devices, $12M revenue</td></tr>
+                <tr><td>Fraudulent Transactions</td><td>Phishing & fake sales via syndicate wallets</td><td>$50M+ laundered</td></tr>
+                <tr><td>Malware Samples</td><td>Embedded in cracks for keylogging & mining</td><td>18 variants, 1.2M infections</td></tr>
+                <tr><td>Forensic Images</td><td>Server mirrors from 12 locations + forum dumps</td><td>108TB total</td></tr>
+            </table>
+        </div>
+
+        <h2>GOFILE & TORRENT EVIDENCE LOGS</h2>
+        <div class="torrent-evidence">
+# GOFILE DOWNLOAD LINKS INTERCEPTED (SAMPLE - ADOBE & OTHER)
+https://gofile.io/d/aB3xK9 - Adobe.Photoshop.2025.v26.11.Full.Crack[m0nkrus].zip - 2.8GB - 187,442 downloads
+https://gofile.io/d/zX7pM2 - Microsoft.Office.365.Cracked.2025.exe - 1.5GB - 92,118 downloads
+https://gofile.io/d/Qw9eR4 - Adobe.CC.All.Apps + GenP.Patch.iso - 24.1GB - 56,773 downloads
+https://gofile.io/d/Pm4vT8 - Autodesk.AutoCAD.2026.Crack.zip - 3.2GB - 45,000 downloads
+
+# TORRENT METADATA CAPTURED (SAMPLE - INCLUDING FORUM LINKS)
+magnet:?xt=urn:btih:aa1b2c3d4e5f6g7h8i9j0k - Adobe_2025_Full_Suite_[Cracked]_BreachForums - Seeders: 1,247 - Leechers: 3,892
+magnet:?xt=urn:btih:bb2c3d4e5f6g7h8i9j0k1l - Windows.11.Pro + Office.Crack_Exploit.in - Seeders: 892 - Leechers: 2,104
+magnet:?xt=urn:btih:cc3d4e5f6g7h8i9j0k1l2m - CorelDRAW.2025.Keygen_IntelBroker - Seeders: 567 - Leechers: 1,456
+
+# HACKING FORUM COMMUNICATIONS LOGGED
+breachforums.is/thread/12345 - "Adobe Acrobat Pro DC 2025 [m0nkrus] + Patch" by IntelBroker - 500 replies
+exploit.in/topic/67890 - "VMware Workstation 17 Crack + DDoS Tool Bundle" - 300 views
+xss.is/forum/piracy/44567 - "Lightroom Classic 2026 Torrent Magnet" - Linked to $50K fraud op
+        </div>
+
+        <h2>ADDITIONAL DOMAINS TARGETED FOR IMMINENT SEIZURE</h2>
+        <div class="future-takedowns">
+            <h3>OPERATION EXPANSION: PHASE V IMMINENT</h3>
+            <p>The following affiliated domains, forums, and services have been placed under active surveillance. Seizures scheduled within 72 hours, with ties to the same syndicate:</p>
+            <ul style="margin:20px 0; padding-left:35px; font-size:1.15rem; line-height:2;">
+                <li><strong>crackhub[.]pro</strong> - Primary mirror for Adobe & Microsoft cracks • 1.2M monthly visitors • Botnet C2 server</li>
+                <li><strong>adobefree[.]cc</strong> - Torrent index with XSS.is links • 890K seeded files • $2M fraud revenue</li>
+                <li><strong>genpdownloads[.]net</strong> - GenP tool repository • 450K downloads • Tied to IntelBroker threads</li>
+                <li><strong>amtemu[.]site</strong> - AMTEmu distribution • Linked to 300K activations • DDoS-for-hire promo</li>
+                <li><strong>pirateadobe[.]org</strong> - Forum with 180K members • Private invites seized • Malware distribution hub</li>
+                <li><strong>breachforums.is (Mirror)</strong> - Hacking forum remnant • Admin logs from Kai West recovered</li>
+                <li><strong>exploit.in/piracy</strong> - Section for software cracks • 217 threads raided</li>
+            </ul>
+            <p><strong>WARNING:</strong> Access to any listed resource will trigger immediate IP logging and inclusion in prosecution database. Syndicate's botnet is offline; attempts to reconnect will be traced.</p>
+        </div>
+
+        <h2>SIMULTANEOUS INTERNATIONAL RAIDS EXECUTED</h2>
+        <div class="raid-timeline">
+            <div class="raid-item">
+                <div class="raid-content">
+                    <h3>UNITED STATES – LOS ANGELES, CA – 05:47 AM PST</h3>
+                    <p>FBI Cyber Division & DHS • Primary server farm raided • 14 suspects detained • 72TB evidence • $1.2M assets frozen • BreachForums admin credentials seized</p>
+                </div>
+            </div>
+            <div class="raid-item">
+                <div class="raid-content">
+                    <h3>UNITED STATES – NEW YORK, NY – 08:52 AM EST</h3>
+                    <p>NYPD & U.S. Secret Service • Admin residence • Lead developer (FBI Wanted affiliate) arrested • Source code, botnet controllers, and forum dumps recovered</p>
+                </div>
+            </div>
+            <div class="raid-item">
+                <div class="raid-content">
+                    <h3>FRANCE – PARIS – 13:00 CET</h3>
+                    <p>Interpol Lyon & French Cyber Police • IntelBroker extradition site • 4 BreachForums admins detained • $25M data sales logs</p>
+                </div>
+            </div>
+            <div class="raid-item">
+                <div class="raid-content">
+                    <h3>ROMANIA – BUCHAREST – 15:45 EET</h3>
+                    <p>DIICOT & Romanian Police • Bulletproof hosting • 8 servers imaged • Torrent seeders & DDoS botnet nodes offline</p>
+                </div>
+            </div>
+            <div class="raid-item">
+                <div class="raid-content">
+                    <h3>NETHERLANDS – AMSTERDAM – 14:15 CET</h3>
+                    <p>Dutch National Police • CDN & GoFile mirror • 6 administrators questioned • 2TB torrent metadata • Fraud wallet traces</p>
+                </div>
+            </div>
+            <div class="raid-item">
+                <div class="raid-content">
+                    <h3>SINGAPORE – 21:20 SGT</h3>
+                    <p>Singapore Police Force • Regional node • Cryptocurrency exchange frozen • $800K seized • Links to Lazarus Group</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>REAL-TIME CONNECTION LOGGING</h2>
+        <div class="ip-log">
+# INTERPOL EVIDENCE LOG - LIVE CONNECTION & GOFILE/TORRENT/FORUM CAPTURE
+[2025-11-04 14:33:21 UTC] 185.###.###.### - GOFILE /d/aB3xK9 - Photoshop.2025.Crack[m0nkrus].zip - [US/CA/LosAngeles] - ISP: Spectrum - Forum: BreachForums
+[2025-11-04 14:33:17 UTC] 192.###.###.### - TORRENT magnet:?xt=urn:btih:aa1b2c3d... - CC.All.Apps.iso + Botnet Tool - [CA/ON/Toronto] - ISP: Bell - $50K Fraud Link
+[2025-11-04 14:33:13 UTC] 203.###.###.### - EXPLOIT.IN /thread/67890 - AutoCAD.Crack + DDoS Kit - [AU/NSW/Sydney] - ISP: Telstra
+[2025-11-04 14:33:09 UTC] 91.###.###.### - BREACHFORUMS /post/12345 - Acrobat.Pro.2025.Patch - [DE/BY/Munich] - ISP: DTAG - IntelBroker Thread
+... [4,729,000+ ENTRIES ARCHIVED] ...
+        </div>
+
+        <div class="contact-box">
+            <h3>REPORT PIRACY • CONTACT AUTHORITIES</h3>
+            <p><strong>INTERPOL 24/7 Command Centre (Lyon):</strong> +33 4 72 44 70 00</p>
+            <p><strong>INTERPOL Singapore:</strong> +65 6323 9800</p>
+            <p><strong>INTERPOL Washington:</strong> +1 (202) 610-8500</p>
+            <p><strong>Europol EC3:</strong> +31 70 302 5000</p>
+            <p><strong>Adobe Anti-Piracy:</strong> piracy@adobe.com | +1 (408) 536-6000</p>
+            <p><strong>FBI IC3 (Cyber Tip Line):</strong> www.ic3.gov | +1 (800) 225-5324</p>
+        </div>
+
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Interpol_Logo.svg" alt="INTERPOL" class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Europol_logo.svg" alt="Europol" class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/1/1c/United_States_Department_of_Justice.svg" alt="DOJ" class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/FBI_Seal.png" alt="FBI" class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Adobe_Corporate_logo.svg" alt="Adobe" class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/RCMP_logo.svg" alt="RCMP" class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/German_Federal_Police_Logo.svg" alt="BKA" class="logo">
+        </div>
+
+        <div class="warning">
+            <p>DO NOT DELETE EVIDENCE • DO NOT ACCESS AFFILIATED SITES OR FORUMS • DO NOT USE TOR OR VPN<br>
+            ALL ACTIONS ARE MONITORED • FORENSIC RECOVERY WILL BE USED IN COURT • SYNDICATE DISMANTLED - NO SAFE HAVEN</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Seized:</strong> November 4, 2025 | <strong>Warrant:</strong> #2025-INT-4471 | <strong>Case:</strong> ICC-2025-CYBER-001 | <strong>Domain:</strong> adobecrackeddownloads.linkpc.net</p>
+            <p class="legal-text">
+                This domain seized under international authority. All data preserved under INTERPOL protocols. 
+                Interference constitutes an international offense. Hacker syndicate dismantled; remaining fugitives will be apprehended.
+            </p>
+        </div>
     </div>
 
-    <table class="product-table">
-      <tbody id="productList">
-        <tr class="product-row">
-          <td style="width: 80px;">
-            <img class="icon" src="https://1000logos.net/wp-content/uploads/2020/09/Adobe-Acrobat-Logo-2012.png" alt="Adobe Acrobat Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Acrobat Pro DC 2025 — 25.1.20813 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">October 18, 2025</div>
-              <div class="description">Official product page & trial / subscription details.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/DzXgB0" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousoct2025.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://e7.pngegg.com/pngimages/135/471/png-clipart-adobe-acrobat-adobe-reader-pdf-computer-icons-foxit-reader-others-text-adobe.png" alt="Adobe Acrobat Reader Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Acrobat Reader DC 2025 — 25.001.20813 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">October 17, 2025</div>
-              <div class="description">Free PDF reader from Adobe.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/fFl8juN" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://i.pinimg.com/736x/f8/1f/dc/f81fdc42958b880279f0b0f2a7ec82aa.jpg" alt="Adobe Photoshop Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Photoshop 2025 for Mac — 26.11 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">October 14, 2025</div>
-              <div class="description">Product page and updater guidance.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/QwMHtVj" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/photoshop/desktop/whats-new/photoshop-on-desktop-release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://logos-world.net/wp-content/uploads/2025/07/Illustrator-Logo.png" alt="Adobe Illustrator Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Illustrator 2025 — 29.8.2 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">October 1, 2025</div>
-              <div class="description">Download page and trial info.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/bILqr3" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/illustrator/desktop/new-features/release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://i.pinimg.com/736x/f8/1f/dc/f81fdc42958b880279f0b0f2a7ec82aa.jpg" alt="Adobe Photoshop Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Photoshop 2025 — 26.11.0 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">September 25, 2025</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/kYVYXn" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/photoshop/desktop/whats-new/photoshop-on-desktop-release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://logos-world.net/wp-content/uploads/2020/11/Adobe-Photoshop-Emblem.png" alt="Adobe Photoshop Elements Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Photoshop Elements 2026 — 26.0 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">September 25, 2025</div>
-              <div class="description">Elements downloads and installers.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/5qMyxY" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/photoshop-elements/using/whats-new.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://sm.pcmag.com/pcmag_me/review/a/adobe-prem/adobe-premiere-elements_gv8u.png" alt="Adobe Premiere Elements Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Premiere Elements 2026 — 26.0 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">September 25, 2025</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/gPT4Tl" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/premiere-elements/using/whats-new.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://i.pinimg.com/236x/57/dd/0f/57dd0f15096296b73bc64aa9ebfbc290.jpg?nii=t" alt="Adobe After Effects Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe After Effects 2025 — 25.5 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">September 23, 2025</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/fhf0JJ" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/after-effects/release-note/release-notes-after-effects.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://webobjects2.cdw.com/is/image/CDW/6960112?$product-main$" alt="Adobe Premiere Pro Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Premiere Pro 2025 — 25.5 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">September 12, 2025</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/H1MolP" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/premiere-pro/release-note/release-notes-premiere-pro.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://webobjects2.cdw.com/is/image/CDW/6960112?$product-main$" alt="Adobe Premiere Pro Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Premiere Pro 2025 for Mac — 25.4.1 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">September 8, 2025</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/H1MolP" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/premiere-pro/release-note/release-notes-premiere-pro.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://static.vecteezy.com/system/resources/previews/030/613/276/non_2x/adobe-illustrator-icon-design-in-free-vector.jpg" alt="Adobe Illustrator Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Illustrator 2026 for Mac — 30.0 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">October 20, 2025</div>
-              <div class="description">Product page and trial info.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/6tRYGv" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/illustrator/desktop/new-features/release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://webobjects2.cdw.com/is/image/CDW/5313306?$product-main$" alt="Adobe Lightroom Classic Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Lightroom Classic 2026 — 15.0 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">October 15, 2025</div>
-              <div class="description">Product page and trial info.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/lz2RGKo" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/lightroom-classic/help/whats-new/release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://webobjects2.cdw.com/is/image/CDW/6959916?$product-main$" alt="Adobe InDesign Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe InDesign 2026 — 21.0 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">October 10, 2025</div>
-              <div class="description">Product page and trial info.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/8dnhYl" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/indesign/release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://webobjects2.cdw.com/is/image/CDW/6960827?$product-main$" alt="Adobe Dreamweaver Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Dreamweaver 2021 — 21.0 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">September 30, 2025</div>
-              <div class="description">Product page and trial info.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://send.now/hvunlspveaf3" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/dreamweaver/release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://cdn.techjockey.com/web/assets/images/techjockey/products/27038_27038_Substance3DSamplerlogo.jpg" alt="Adobe Substance 3D Sampler Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Substance 3D Sampler — 4.0 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">September 20, 2025</div>
-              <div class="description">Product page and trial info.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/ZW7w00t" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/substance-3d-sampler/release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://webobjects2.cdw.com/is/image/CDW/7960449?$product-main$" alt="Adobe XD Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe XD — 50.0 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">September 15, 2025</div>
-              <div class="description">Product page and trial info.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/XgTBGCG" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/xd/release-notes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://mir-s3-cdn-cf.behance.net/projects/404/69026d209116567.Y3JvcCwyMDY0LDE2MTUsNSww.png" alt="Adobe Substance 3D Stager Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver">Adobe Substance 3D Stager — 3.0 <span style="color: red;">[m0nkrus]</span></div>
-              <div class="date">September 10, 2025</div>
-              <div class="description">Product page and trial info.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://ouo.io/e1mVCV" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-            <a class="btn btn-secondary" href="https://helpx.adobe.com/substance-3d-stager/release-notes/all-changes.html" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Release Notes</a>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="3"><h2>[Patching🛠️]</h2></td>
-        </tr>
-        <tr class="product-row">
-          <td>
-            <img class="icon" src="https://lemmy.dbzer0.com/pictrs/image/5275f3fb-b51d-46b0-9c50-1bd0bdfbdb61.webp?format=webp" alt="GenP Icon">
-          </td>
-          <td>
-            <div class="meta">
-              <div class="ver"><span style="color: blue;">GenP</span></div>
-              <div class="description">GenP is an unofficial utility that patches Adobe Creative Cloud applications, enabling users to bypass trial restrictions and use the software without activation keys. By modifying local licensing DLLs, it replaces Adobe's online verification calls and can disable the Adobe Genuine Software Integrity Service (AGSIS) to prevent license checks.</div>
-            </div>
-          </td>
-          <td style="text-align: right;">
-            <a class="btn btn-primary" href="https://gen.paramore.su/#downloads" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="pagination">
-      <a href="#" class="page-btn active">1</a>
-      <a href="#" class="page-btn">2</a>
-      <a href="#" class="page-btn">3</a>
+    <div class="disclaimer">
+        <p><em>SEIZED NOTICE
+This domain has been seized by law enforcement for alleged criminal activity involving the unauthorized distribution of copyrighted software.</em></p>
     </div>
 
-    <footer>
-      <p> | Last updated on 2.11.2025</p>
-    </footer>
-  </div>
-
-  <div id="malwareWarningModal" class="modal">
-    <div class="modal-content">
-      <h2>🚨 IMPORTANT SAFETY NOTICE: Read This Before Proceeding! 🚨</h2>
-      <p><strong>This site is for EDUCATIONAL and TESTING PURPOSES ONLY. We do not condone any illegal activities. Always purchase official software for production use and support developers!</strong></p>
-      <p>Hey there! We know you're excited to explore, but please take a moment to read this crucial warning—it's short, we promise, and it could save you from unnecessary worry. Our site is new (launched late 2025), so it's normal to feel cautious. Rest assured, everything here is shared strictly for learning, research, or personal experimentation in controlled environments.</p>
-      <h3>Why Your Antivirus (Like Windows Defender) Might Flag These Files—And Why It's Often a False Positive</h3>
-      <p>False positives happen all the time with modified or cracked software, especially from sources like m0nkrus repacks. Here's a simple breakdown to help you understand:</p>
-      <ul>
-        <li><strong>How Windows Defender Works:</strong> Windows Defender (part of Microsoft Security) uses a combination of signature-based scanning (matching known virus patterns), behavior monitoring (watching for suspicious actions like file modifications), and heuristics (smart guesses based on code patterns). It scans files in real-time and during downloads, erring on the side of caution to protect you—even if that means flagging harmless stuff.</li>
-        <li><strong>Why m0nkrus Adobe Repacks Get Detected:</strong> m0nkrus versions are custom-modified installers that patch Adobe software to bypass license checks (e.g., altering DLL files to skip online activation or disable services like Adobe Genuine Software Integrity Service). This looks "suspicious" to Defender because:</li>
-          <ul>
-            <li>It involves code injection or hooking, which mimics malware techniques.</li>
-            <li>Broken digital signatures (official Adobe files are signed; modifications break this, making them seem tampered with).</li>
-            <li>Compressed archives (like RAR) often trigger alerts if they contain executables with patching behavior.</li>
-          </ul>
-        <li>These flags are usually labeled as "HackTool," "Trojan," or "PUA" (Potentially Unwanted Application)—not because they're actual viruses, but due to patterns that resemble risks. In reality, tested m0nkrus repacks are clean for educational use; they don't contain adware, spyware, or harmful code.</li>
-      </ul>
-      <h3>Additional Info About Our Site</h3>
-      <ul>
-        <li><strong>Files Are Not Hosted Here:</strong> We don't host any files on our servers. All download links point to external third-party sources (like ouo.io redirects to community-shared uploads). We're just curating links for convenience.</li>
-        <li><strong>No Earnings Involved:</strong> This is a non-profit resource run by enthusiasts. We don't make money from ads, donations, or anything—it's purely to share knowledge for testing purposes.</li>
-      </ul>
-      <p><strong>How to Verify Safety Yourself:</strong></p>
-      <ul>
-        <li>Upload files to VirusTotal.com (scans with 70+ engines)—flags are often low-confidence heuristics from just a few scanners.</li>
-        <li>Run everything in a virtual machine (e.g., VirtualBox) for safe testing.</li>
-        <li>If Defender blocks a file, you can add an exclusion temporarily (Settings > Update & Security > Windows Security > Virus & threat protection > Manage settings > Exclusions)—but only if you're sure!</li>
-      </ul>
-      <p>Remember: This is all for educational purposes only. If you're uncomfortable, close this site now. Proceed only if you understand the risks and use responsibly.</p>
-      <button id="warningCloseBtn" disabled>Close (wait 3 seconds)</button>
-    </div>
-  </div>
-
-  <div id="passwordModal" class="modal">
-    <div class="modal-content">
-      <h2>🔑 Quick Guide: File Password & Extraction Tips 🔑</h2>
-      <p><strong>For EDUCATIONAL and TESTING PURPOSES ONLY. We do not condone illegal activities—always buy official software!</strong></p>
-      <p>We've made this popup prominent because many users ask about passwords. Please read this fully—it'll save you time and hassle!</p>
-      <h3>Password for ALL RAR Files: <span style="color: red; font-size: 20px;">123</span></h3>
-      <p>All downloads are in RAR format for compression and basic protection. Enter "123" (without quotes) when prompted during extraction.</p>
-      <h3>Recommended Tool: WinRAR (or Alternatives)</h3>
-      <p>If you don't have extraction software, here's how to get started safely:</p>
-      <ol>
-        <li>Download WinRAR from the official site: <a href="https://www.win-rar.com/download.html" target="_blank" rel="noopener">win-rar.com</a> (choose your OS: Windows, macOS, Linux).</li>
-        <li>Run the installer:</li>
-          <ul>
-            <li>Accept the license.</li>
-            <li>Select install location (default OK).</li>
-            <li>Choose file associations (include RAR).</li>
-            <li>Finish setup.</li>
-          </ul>
-        <li>Open WinRAR once installed.</li>
-      </ol>
-      <h3>Step-by-Step Extraction:</h3>
-      <ol>
-        <li>Right-click the RAR file > "Extract Here" or "Extract to [folder]".</li>
-        <li>Enter password: 123 > OK.</li>
-        <li>Files extract to your chosen spot.</li>
-      </ol>
-      <h3>Pro Tips:</h3>
-      <ul>
-        <li>WinRAR is shareware—free to use, but may nag for purchase after trial (functions still work).</li>
-        <li>Antivirus blocking? Temporarily disable or add exclusion (but scan first!).</li>
-        <li>Free alternative: 7-Zip from <a href="https://www.7-zip.org/" target="_blank" rel="noopener">7-zip.org</a>—extraction steps are similar.</li>
-        <li>Always download from official sources to avoid real malware.</li>
-      </ul>
-      <p>Note: Links lead to external sites—we don't host files or earn from this. Use responsibly for learning only!</p>
-      <button id="closeBtn" disabled>Close (wait 3 seconds)</button>
-    </div>
-  </div>
-
-  <script>
-    const toggle = document.getElementById('theme-switch');
-    toggle.addEventListener('change', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-
-    const searchInput = document.getElementById('searchInput');
-    const productList = document.getElementById('productList');
-    const rows = productList.getElementsByClassName('product-row');
-
-    searchInput.addEventListener('keyup', () => {
-      const filter = searchInput.value.toLowerCase();
-      for (let row of rows) {
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(filter) ? '' : 'none';
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('a.btn-primary').forEach(el => {
-        if (!el.innerHTML.includes('Download')) {
-          el.innerHTML = '<i class="fas fa-download"></i> Download';
-        }
-      });
-
-      const warningModal = document.getElementById('malwareWarningModal');
-      const warningCloseBtn = document.getElementById('warningCloseBtn');
-      const modal = document.getElementById('passwordModal');
-      const closeBtn = document.getElementById('closeBtn');
-
-      warningModal.style.display = 'block';
-
-      setTimeout(() => {
-        warningCloseBtn.disabled = false;
-        warningCloseBtn.classList.add('enabled');
-        warningCloseBtn.textContent = 'I Understand & Proceed';
-      }, 3000);
-
-      warningCloseBtn.addEventListener('click', () => {
-        if (!warningCloseBtn.disabled) {
-          warningModal.style.display = 'none';
-          modal.style.display = 'block';
-          setTimeout(() => {
-            closeBtn.disabled = false;
-            closeBtn.classList.add('enabled');
-            closeBtn.textContent = 'Got It!';
-          }, 3000);
-        }
-      });
-
-      window.addEventListener('click', (event) => {
-        if (event.target === warningModal && !warningCloseBtn.disabled) {
-          warningModal.style.display = 'none';
-          modal.style.display = 'block';
-          setTimeout(() => {
-            closeBtn.disabled = false;
-            closeBtn.classList.add('enabled');
-            closeBtn.textContent = 'Got It!';
-          }, 3000);
-        }
-      });
-
-      closeBtn.addEventListener('click', () => {
-        if (!closeBtn.disabled) {
-          modal.style.display = 'none';
-        }
-      });
-
-      window.addEventListener('click', (event) => {
-        if (event.target === modal && !closeBtn.disabled) {
-          modal.style.display = 'none';
-        }
-      });
-    });
-
-    function placeholderFunc1() { console.log('Placeholder 1'); }
-    function placeholderFunc2() { console.log('Placeholder 2'); }
-    function placeholderFunc3() { console.log('Placeholder 3'); }
-    function placeholderFunc4() { console.log('Placeholder 4'); }
-    function placeholderFunc5() { console.log('Placeholder 5'); }
-    function placeholderFunc6() { console.log('Placeholder 6'); }
-    function placeholderFunc7() { console.log('Placeholder 7'); }
-    function placeholderFunc8() { console.log('Placeholder 8'); }
-    function placeholderFunc9() { console.log('Placeholder 9'); }
-    function placeholderFunc10() { console.log('Placeholder 10'); }
-    function placeholderFunc11() { console.log('Placeholder 11'); }
-    function placeholderFunc12() { console.log('Placeholder 12'); }
-    function placeholderFunc13() { console.log('Placeholder 13'); }
-    function placeholderFunc14() { console.log('Placeholder 14'); }
-    function placeholderFunc15() { console.log('Placeholder 15'); }
-    function placeholderFunc16() { console.log('Placeholder 16'); }
-    function placeholderFunc17() { console.log('Placeholder 17'); }
-    function placeholderFunc18() { console.log('Placeholder 18'); }
-    function placeholderFunc19() { console.log('Placeholder 19'); }
-    function placeholderFunc20() { console.log('Placeholder 20'); }
-    function placeholderFunc21() { console.log('Placeholder 21'); }
-    function placeholderFunc22() { console.log('Placeholder 22'); }
-    function placeholderFunc23() { console.log('Placeholder 23'); }
-    function placeholderFunc24() { console.log('Placeholder 24'); }
-    function placeholderFunc25() { console.log('Placeholder 25'); }
-    function placeholderFunc26() { console.log('Placeholder 26'); }
-    function placeholderFunc27() { console.log('Placeholder 27'); }
-    function placeholderFunc28() { console.log('Placeholder 28'); }
-    function placeholderFunc29() { console.log('Placeholder 29'); }
-    function placeholderFunc30() { console.log('Placeholder 30'); }
-    function placeholderFunc31() { console.log('Placeholder 31'); }
-    function placeholderFunc32() { console.log('Placeholder 32'); }
-    function placeholderFunc33() { console.log('Placeholder 33'); }
-    function placeholderFunc34() { console.log('Placeholder 34'); }
-    function placeholderFunc35() { console.log('Placeholder 35'); }
-    function placeholderFunc36() { console.log('Placeholder 36'); }
-    function placeholderFunc37() { console.log('Placeholder 37'); }
-    function placeholderFunc38() { console.log('Placeholder 38'); }
-    function placeholderFunc39() { console.log('Placeholder 39'); }
-    function placeholderFunc40() { console.log('Placeholder 40'); }
-    function placeholderFunc41() { console.log('Placeholder 41'); }
-    function placeholderFunc42() { console.log('Placeholder 42'); }
-    function placeholderFunc43() { console.log('Placeholder 43'); }
-    function placeholderFunc44() { console.log('Placeholder 44'); }
-    function placeholderFunc45() { console.log('Placeholder 45'); }
-    function placeholderFunc46() { console.log('Placeholder 46'); }
-    function placeholderFunc47() { console.log('Placeholder 47'); }
-    function placeholderFunc48() { console.log('Placeholder 48'); }
-    function placeholderFunc49() { console.log('Placeholder 49'); }
-    function placeholderFunc50() { console.log('Placeholder 50'); }
-  </script>
 </body>
 </html>
